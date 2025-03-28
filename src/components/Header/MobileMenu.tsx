@@ -55,7 +55,7 @@ function MobileMenu() {
                 <div className="4/5 h-full mt-32">
                     <ul className="space-y-7 h-full px-5 text-lg font-light mt-8 pt-9 border-t-[0.5px] mx-3">
                         <li><Link href={"/"} onClick={() => setIsOpen(false)}>{t('home')}</Link></li>
-                        <li><Link href={"/"} onClick={() => setIsOpen(false)}>{t('bookNow')}</Link></li>
+                        <li><Link href={"https://www.instagram.com/se_nailstudio"} onClick={() => setIsOpen(false)}>{t('bookNow')}</Link></li>
                         <li><Link href={"/gallery"} onClick={() => setIsOpen(false)}>{t('gallery')}</Link></li>
                         <li><Link href={"/about-us"} onClick={() => setIsOpen(false)}>{t('aboutUs')}</Link></li>
                     </ul>

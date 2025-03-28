@@ -150,7 +150,7 @@ export default async function RootLayout({
 }>) {
 
   // Type-safe locale validation using a type assertion
-  const validLocales = routing.locales as readonly string[];
+  const validLocales =routing.locales as readonly string[];
   if (!validLocales.includes(locale)) {
     notFound();
   }

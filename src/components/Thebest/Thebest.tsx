@@ -12,15 +12,15 @@ function Thebest() {
 
 
     return (
-        <div className="w-screen relative overflow-x-hidden pt-0 lg:pt-0 ">
-            <h1 className="   pt-0.5 md:pt-0 text-[2.10rem] md:text-7xl  lg:text-[6rem] xl:lg:text-[9rem] font-[900] tracking-tight  origin-left font-inter text-nail-special2 relative ">{t('title')}</h1>
-            <div className=" flex w-full gap-1 md:gap-2 lg:gap-4 mb-20 relative overflow-hidden ">
-                <div className="w-3/6 md:w-2/6 aspect-9-16 lg:aspect-4-5 overflow-hidden relative bg-nail-special2 ">
+        <div className="w-screen relative overflow-x-hidden pt-0 lg:pt-0   ">
+            <h1 className="  text-nowrap z-10 text-[3rem] md:text-[6rem] tracking-tight lg:text-[8rem] xl:text-[11rem] scale-125 font-[900]  origin-left font-inter leading-12 md:leading-24   lg:leading-32 xl:leading-44 text-nail-special2 relative ">{t('title')}</h1>
+            <div className="   flex w-full gap-1 md:gap-2 lg:gap-4 mb-20 relative overflow-hidden ">
 
-
-                    <Image alt='' src={img3} className='object-cover h-full w-full ' />
+                <div className=" w-3/6 md:w-2/6 aspect-9-16 lg:aspect-4-5 overflow-hidden relative bg-nail-special2 ">
+                    <Image alt='' src={img3} className=' object-cover h-full w-full mix-blend-multiply md:mix-blend-normal ' />
                     {/* <div className='bg-nail-special2 opacity-40 absolute inset-0 mix-blend-lighten'></div> */}
                 </div>
+
                 <div className="hidden md:block w-2/6 lg:aspect-4-5 overflow-hidden relative bg-nail-special2  ">
                     <Image alt='' src={img2} className='object-cover h-full w-full mix-blend-exclusion' />
                     {/* <div className=' bg-nail-special2 mix-blend-screen opacity-40 absolute inset-0 '></div> */}
@@ -29,7 +29,7 @@ function Thebest() {
 
 
                 <div className=" w-3/6 md:w-2/6 aspect-9-16 lg:aspect-4-5 overflow-hidden relative  bg-nail-special2 rounded-tr-full z-20">
-                    <Image alt='' src={img4} className='object-cover h-full w-full   ' />
+                    <Image alt='' src={img4} className='object-cover h-full w-full  mix-blend-multiply md:mix-blend-normal ' />
                     {/* <div className='bg-nail-special2 opacity-40 absolute inset-0 mix-blend-lighten'></div> */}
                 </div>
 
@@ -38,7 +38,7 @@ function Thebest() {
             </div>
 
 
-            <div className="  h-96 overflow-hidden  lg:grid grid-cols-5 grid-rows-5 gap-1  w-2/6 right-0 top-0 absolute scale-75 origin-top-right rotate-6 text-nail-special2 ">
+            <div className=" -z-30 h-96 overflow-hidden  lg:grid grid-cols-5 grid-rows-5 gap-1  w-2/6 right-0 top-0 absolute scale-75 origin-top-right rotate-6 text-nail-special2 ">
                 {/* Première rangée */}
                 <div className="col-span-2 row-start-1 font-cherry-bomb-one text-4xl overflow-hidden">Polished Perfection</div>
                 <div className="col-start-3 row-start-1 font-fontdiner-swanky text-2xl"> Nail Art Studio</div>
@@ -66,7 +66,7 @@ function Thebest() {
                 <div className="col-span-2 col-start-2 row-start-5 font-bangers text-2xl word-spacing tracking-wider">Flawless Finish Flawless Finish Flawless Finish</div>
                 <div className="col-span-2 col-start-4 row-start-5 font-cherry-bomb-one text-4xl rotate-12">Sculpted Acrylics</div>
             </div>
-            <div className='  -rotate-12 md:-rotate-0 lg:block w-3/6 md:w-2/6 lg:w-2/5  right-0 lg:right-0 md:right-5 md:top-0 -top-10 absolute scale-75 h-96 origin-top-right bg-gradient-to-tr from-white via-white  to-transparent'>
+            <div className=' -z-20 -rotate-12 md:-rotate-0 lg:block w-3/6 md:w-2/6 lg:w-2/5  right-0 lg:right-0 md:right-5 md:top-0 -top-10 absolute scale-75 h-96 origin-top-right bg-gradient-to-tr from-white via-white  to-transparent'>
 
             </div>
         </div>

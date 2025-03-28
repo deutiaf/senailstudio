@@ -214,7 +214,7 @@ function ImageCarousel({ maxTextLength = 150 }: ImageCarouselProps) {
     };
 
     return (
-        <section className="mb-24 md:mb-0 overflow-hidden py-10 text-sm md:text-lg text-zinc-600 px-4 lg:px-20 xl:px-32 leading-6 md:leading-tight relative">
+        <section className="mb-24 md:mb-20 mt-20 overflow-hidden py-10 text-sm md:text-lg text-zinc-600 px-4 lg:px-20 xl:px-32 leading-6 md:leading-tight relative">
             <div className='items-center w-full flex flex-col md:flex-row'>
                 <div
                     ref={leftSideRef}
@@ -242,7 +242,7 @@ function ImageCarousel({ maxTextLength = 150 }: ImageCarouselProps) {
                         {slidesData.map((slide, index) => (
                             <div
                                 key={index}
-                                className="flex-shrink-0 w-full h-fit snap-center px-2"
+                                className="z-40 flex-shrink-0 w-full h-fit snap-center px-2"
                             >
                                 <div className="z-40 relative w-full overflow-hidden space-y-3 flex flex-col items-center justify-center">
                                     <div className='w-auto flex flex-col space-x-4 justify-center'>
@@ -273,9 +273,9 @@ function ImageCarousel({ maxTextLength = 150 }: ImageCarouselProps) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="font-josefin-sans word-spacing">
+                                    <div className="  z-20 font-josefin-sans word-spacing">
                                         <p className="text-center p-7">
-                                            &quot{truncateText(slide.texte, index)}&quot
+                                            &quot;{truncateText(slide.texte, index)}&quot;
                                         </p>
                                     </div>
                                 </div>
@@ -337,7 +337,7 @@ function ImageCarousel({ maxTextLength = 150 }: ImageCarouselProps) {
             {/*    -------------------------------    DESIGN MOBILE ONLY  ---------------------     */}
 
 
-            <div className=" md:hidden  h-96 overflow-hidden grid grid-cols-5 grid-rows-5 gap-1  -rotate-12 w-11/12 -left-[17rem] -bottom-24 scale-75  absolute   text-nail-special2 ">
+            <div className="-z-10 md:hidden  h-96 overflow-hidden grid grid-cols-5 grid-rows-5 gap-1  -rotate-12 w-11/12 -left-[17rem] -bottom-24 scale-75  absolute   text-nail-special2 ">
                 {/* Première rangée */}
                 <div className="col-span-2 row-start-1 font-cherry-bomb-one text-4xl overflow-hidden">Polished Perfection</div>
                 <div className="col-start-3 row-start-1 font-fontdiner-swanky text-2xl"> Nail Art Studio</div>
@@ -365,7 +365,7 @@ function ImageCarousel({ maxTextLength = 150 }: ImageCarouselProps) {
                 <div className="col-span-2 col-start-2 row-start-5 font-bangers text-2xl word-spacing tracking-wider">Flawless Finish Flawless Finish Flawless Finish</div>
                 <div className="col-span-2 col-start-4 row-start-5 font-cherry-bomb-one text-4xl rotate-12">Sculpted Acrylics</div>
             </div>
-            <div className='md:hidden  h-96 overflow-hidden grid grid-cols-5 grid-rows-5 gap-1   -rotate-12 w-11/12 -left-[17rem] -bottom-24 scale-75  absolute  bg-gradient-to-tl from-white via-white via-20% to-transparent'></div>
+            <div className=' -z-10 md:hidden  h-96 overflow-hidden grid grid-cols-5 grid-rows-5 gap-1   -rotate-12 w-11/12 -left-[17rem] -bottom-24 scale-75  absolute  bg-gradient-to-tl from-white via-white via-20% to-transparent'></div>
         </section>
     )
 }

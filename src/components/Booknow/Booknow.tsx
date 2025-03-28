@@ -15,7 +15,7 @@ function Booknow() {
                 <p className='text-neutral-100 font-poppins tracking-wide word-spacing font-medium lg:font-normal md:text-lg leading-6 md:leading-7 text-[16px]'>
                     {t('description')}  {/* Remplacer par la clé de traduction */}
                 </p>
-                <Link href={''} className='w-fit border transition-colors duration-300 px-7 py-1 md:py-3 hover:bg-nail-special2 hover:text-nail-50 hover:border-nail-special2'>
+                <Link href={"https://www.instagram.com/se_nailstudio"} className='w-fit border transition-colors duration-300 px-7 py-1 md:py-3 hover:bg-nail-special2 hover:text-nail-50 hover:border-nail-special2'>
                     {t('bookNowButton')}  {/* Remplacer par la clé de traduction */}
                 </Link>
             </div>

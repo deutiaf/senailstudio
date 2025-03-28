@@ -15,10 +15,11 @@ export default function Home() {
 
     <Services />
 
-    <Advantages />
 
     <Booknow />
     <Reviews />
+    <Advantages />
+
 
 
     <Boutique />

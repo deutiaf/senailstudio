@@ -1,81 +1,87 @@
 import React from 'react'
-import cert from '@/../public/images/certificate.png'
-import calendar from '@/../public/images/calendar.png'
-import sani from '@/../public/images/hand-sanitizer.png'
-import offer from '@/../public/images/limited-offer.png'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import {
+    UserCheck,   // For licensed specialist
+    Calendar,    // For online booking
+    Tag,         // For special deals
+    ShieldCheck  // For sanitized safe environment
+} from 'lucide-react'
+import img1 from '@/../public/images/annie-spratt-FqpSyjCdccw-unsplash.jpg'
 
 function Advantages() {
-    const t = useTranslations('Advantages');  // Utilisation de useTranslations pour charger les traductions
+    const t = useTranslations('Advantages');
+
+    const advantagesData = [
+        {
+            icon: UserCheck,
+            title: t('licencedSpecialist'),
+            description: t('licencedSpecialistDescription')
+        },
+        {
+            icon: Calendar,
+            title: t('onlineBooking'),
+            description: t('onlineBookingDescription')
+        },
+        {
+            icon: Tag,
+            title: t('specialDeals'),
+            description: t('specialDealsDescription')
+        },
+        {
+            icon: ShieldCheck,
+            title: t('sanitizedSafeEnvironment'),
+            description: t('sanitizedSafeEnvironmentDescription')
+        }
+    ];
 
     return (
-        <section className='w-screen pb-16'>
-            <h1 className='md:tracking-[0.6rem] lg:tracking-[0.9rem] font-medium text-right px-3 lg:px-10 text-2xl lg:text-3xl text-nail-special2 py-4 word-spacing-big'>
-                {t('title')}  {/* Remplacer par la clé de traduction */}
+        <section className='w-screen overflow-hidden py-20 relative my-28 px-3'>
+            {/* Full section background with glass effect */}
+            <div className='absolute inset-0 z-0'>
+                <Image
+                    alt='Background'
+                    src={img1}
+                    layout='fill'
+                    objectFit='cover'
+                    className='opacity-80'
+                />
+                <div className='absolute inset-0 backdrop-blur-sm bg-black/20'></div>
+            </div>
+
+            <h1 className='md:tracking-[0.6rem] lg:tracking-[0.9rem] font-medium text-right px-3 lg:px-10 text-2xl lg:text-3xl text-white py-4 word-spacing-big relative z-10'>
+                {t('title')}
             </h1>
 
             <div className='flex w-full'>
-                <div className='mx-auto w-11/12 lg:w-full pr-2 lg:flex grid md:grid-cols-2 text-neutral-600'>
-                    <div className="w-full flex z-10 lg:border-r-[0.5px] border-nail-special2 py-5">
-                        <div className='w-3/12 lg:w-4/12 h-full relative p-5 bg-white'>
-                            <Image alt='' src={cert} className='object-cover' />
-                            <div className='bg-nail-special2 absolute inset-0 size-full mix-blend-color'></div>
-                        </div>
-                        <div className='w-9/12 lg:w-8/12 space-y-3'>
-                            <h2 className='font-medium text-lg word-spacing-big italic text-nail-special2'>
-                                {t('licencedSpecialist')}  {/* Remplacer par la clé de traduction */}
-                            </h2>
-                            <p className='font-josefin-sans font-normal italic word-spacing-big leading-5'>
-                                {t('licencedSpecialistDescription')}  {/* Remplacer par la clé de traduction */}
-                            </p>
-                        </div>
-                    </div>
+                <div className='mx-auto w-11/12 lg:w-full pr-2 gap-2 lg:flex grid md:grid-cols-2 text-nail-50 relative z-10'>
+                    {advantagesData.map((item, index) => {
+                        const IconComponent = item.icon;
+                        return (
+                            <div
+                                key={index}
+                                className="rounded-2xl shadow-2xl w-full flex mb-4 bg-black/20"
+                            >
+                                <div className='z-20 flex flex-col items-center justify-center space-y-3 p-4 w-full'>
+                                    {/* Icon Container */}
+                                    <div className='flex items-center justify-center w-full'>
+                                        <IconComponent
+                                            size={48}
+                                            className='text-pink-200 mb-2'
+                                        />
+                                    </div>
 
-                    <div className="w-full flex z-10 lg:border-r-[0.5px] border-nail-special2 py-5">
-                        <div className='w-3/12 lg:w-4/12 h-full relative p-5 bg-white'>
-                            <Image alt='' src={calendar} className='object-cover' />
-                            <div className='bg-nail-special2 absolute inset-0 size-full mix-blend-color'></div>
-                        </div>
-                        <div className='w-9/12 lg:w-8/12 space-y-3'>
-                            <h2 className='font-medium text-lg word-spacing-big italic text-nail-special2'>
-                                {t('onlineBooking')}  {/* Remplacer par la clé de traduction */}
-                            </h2>
-                            <p className='font-josefin-sans font-normal italic word-spacing-big leading-5'>
-                                {t('onlineBookingDescription')}  {/* Remplacer par la clé de traduction */}
-                            </p>
-                        </div>
-                    </div>
+                                    <h2 className='tracking-widest font-medium text-lg word-spacing-big italic text-pink-200 text-center w-5/6'>
+                                        {item.title}
+                                    </h2>
 
-                    <div className="w-full flex z-10 lg:border-r-[0.5px] border-nail-special2 py-5">
-                        <div className='w-3/12 lg:w-4/12 h-full relative p-5 bg-white'>
-                            <Image alt='' src={offer} className='object-cover' />
-                            <div className='bg-nail-special2 absolute inset-0 size-full mix-blend-color'></div>
-                        </div>
-                        <div className='w-9/12 lg:w-8/12 space-y-3'>
-                            <h2 className='font-medium text-lg word-spacing-big italic text-nail-special2'>
-                                {t('specialDeals')}  {/* Remplacer par la clé de traduction */}
-                            </h2>
-                            <p className='font-josefin-sans font-normal italic word-spacing-big leading-5'>
-                                {t('specialDealsDescription')}  {/* Remplacer par la clé de traduction */}
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="w-full flex z-10 py-5">
-                        <div className='w-3/12 lg:w-4/12 h-full relative p-5 bg-white'>
-                            <Image alt='' src={sani} className='object-cover' />
-                            <div className='bg-nail-special2 absolute inset-0 size-full mix-blend-color'></div>
-                        </div>
-                        <div className='w-9/12 lg:w-8/12 space-y-3'>
-                            <h2 className='font-medium text-lg word-spacing-big italic text-nail-special2'>
-                                {t('sanitizedSafeEnvironment')}  {/* Remplacer par la clé de traduction */}
-                            </h2>
-                            <p className='font-josefin-sans font-normal italic word-spacing-big leading-5'>
-                                {t('sanitizedSafeEnvironmentDescription')}  {/* Remplacer par la clé de traduction */}
-                            </p>
-                        </div>
-                    </div>
+                                    <p className='w-11/12 text-center text-lg mx-auto font-josefin-sans font-light tracking-wide italic word-spacing leading-6 text-white'>
+                                        {item.description}
+                                    </p>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>
@@ -83,7 +89,6 @@ function Advantages() {
 }
 
 export default Advantages;
-
 
 
 

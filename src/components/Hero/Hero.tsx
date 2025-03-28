@@ -6,6 +6,8 @@ import img1 from '@/../public/images/nail-ondfvo.jpg'
 import img2 from '@/../public/images/nail-ncoiz.jpg'
 import img3 from '@/../public/images/nail-eed.jpg'
 import img4 from '@/../public/images/nail-nicdc.jpg'
+import imgb from '@/../public/images/annie-spratt-MUVKrHNMvoQ-unsplash.jpg'
+
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
@@ -24,9 +26,12 @@ export default function Hero() {
     const t = useTranslations('Hero');
 
     return (
-        <div className="bg-nail-special2 text-white flex flex-col lg:flex-row-reverse  h-[calc(100vh-4rem)]  w-screen  to-95% pt-7 md:pt-0 justify-start md:justify-center items-center xl:px-16">
-            <div className="bg-nail-special2 mix-blend-color absolute h-3/6 w-3/6 left-0 bottom-0 -z-10"></div>
-            <div className="  md:space-y-4 lg:space-y-0 lg:space-x-10 flex flex-col lg:flex-row h-full lg:max-h-10/12 w-full xl:w-10/12 max-w-[1500px] justify-start md:justify-center items-center ">
+        <div className="shadow-2xl  z-30 bg-gradient-to-t from-transparent via-nail-special2 via-15% to-nail-special2 md:bg-nail-special2 text-white flex flex-col lg:flex-row-reverse  h-[calc(100vh-4rem)]  w-screen  to-95% pt-7 md:pt-0 justify-start md:justify-center items-center xl:px-16">
+            <div className="bg-nail-special2 -z-20 absolute h-2/6 w-full  bottom-0 overflow-hidden md:hidden">
+                <Image src={imgb} alt={`hero`} className="object-cover w-full h-full mix-blend-screen" />
+
+            </div>
+            <div className=" z-10 md:space-y-4 lg:space-y-0 lg:space-x-10 flex flex-col lg:flex-row h-full lg:max-h-10/12 w-full xl:w-10/12 max-w-[1500px] justify-start md:justify-center items-center ">
                 <div className=" h-1/6 md:h-2/6 lg:h-full lg:w-7/12 lg:mb-0 flex flex-col items-center justify-center  lg:space-y-16 ">
                     <div className="  md:space-y-8 lg:space-y-6 lg:h-full lg:pl-5 xl:pl-0 flex  flex-col lg:justify-center  ">
                         <h1 className=" text-nail-50 font-inter font-light scale-y-75  leading-8 md:leading-11 lg:leading-20  lg:tracking-tight  text-5xl md:text-6xl lg:text-8xl text-center lg:text-left px-2 md:px-14 lg:px-0   "><p className=" "><span className="text-lime-300 z-30">{t('title1')}</span > {t('title2')} </p></h1>
@@ -34,7 +39,7 @@ export default function Hero() {
                     </div>
                     <div className=" flex items-start w-fit mx-auto  ">
                         <div className="flex items-center h-fit space-x-3">
-                            <Link href={''} className="hover:bg-nail-50 hover:text-nail-special2 hover:border-nail-special2 transition-colors duration-300 text-sm lg:text-lg text-nail-50 border border-nail-50 py-2 md:py-4 px-7 md:px-12 hidden lg:flex"  > {t("bookNowLink")}</Link>
+                            <Link href={"https://www.instagram.com/se_nailstudio"} className="hover:bg-nail-50 hover:text-nail-special2 hover:border-nail-special2 transition-colors duration-300 text-sm lg:text-lg text-nail-50 border border-nail-50 py-2 md:py-4 px-7 md:px-12 hidden lg:flex"  > {t("bookNowLink")}</Link>
                         </div>
                     </div>
                 </div>

@@ -5,9 +5,9 @@ import img4 from '@/../public/images/giorgio-trovato-gb6gtiTZKB8-unsplash.jpg'
 import insta from '@/../public/images/instapic 2.jpg'
 import shop from '@/../public/images/ezgi-deliklitas-FEIK7lPmKqw-unsplash.jpg'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Mail, MapPin, Phone } from 'lucide-react'
 import { useEffect, useRef } from 'react'
+import { Link } from '@/i18n/routing';
 
 function Page() {
     const t = useTranslations('AboutUs'); // Utilisation des traductions
@@ -73,7 +73,7 @@ function Page() {
             {/* Hero Section */}
             <div
                 ref={heroRef}
-                className='bg-nail-special2  mt-7 px-5 w-11/12 rounded-4xl md:rounded-4xl mx-auto aspect-4-3 md:aspect-16-9 lg:aspect-21-7 overflow-hidden relative flex items-center justify-center opacity-0 translate-y-8 transition-all duration-700'
+                className='shadow-2xl bg-nail-special2  mt-7 px-5 w-11/12 rounded-4xl md:rounded-4xl mx-auto aspect-4-3 md:aspect-16-9 lg:aspect-21-7 overflow-hidden relative flex items-center justify-center opacity-0 translate-y-8 transition-all duration-700'
             >
                 <Image src={img4} alt='' className='mix-blend-exclusion object-cover absolute size-full inset-0 ' />
                 <div className='absolute size-full inset-0'></div>
@@ -131,15 +131,15 @@ function Page() {
                         ref={studioContentRef}
                         className='lg:w-1/2 relative mb-8 lg:mb-0 lg:aspect-4-5 space-y-4 lg:space-y-8 opacity-0 translate-y-8 transition-all duration-700'
                     >
-                        <h2 className='font-poppins font-normal text-xl md:text-4xl tracking-[0.20rem] md:tracking-[0.70rem] leading-9'>{t('discoverBeauty')}</h2>
+                        <h2 className='font-poppins font-normal text-xl md:text-4xl tracking-[0.20rem] md:tracking-[0.70rem]  leading-8 lg:leading-12'>{t('discoverBeauty')}</h2>
                         <p className='font-poppins text-neutral-600 leading-7 text-[15px] word-spacing-big tracking-wide'>
                             {t('studioDescription.textPart1')}
                             <br /> <br />
                             {t('studioDescription.textPart2')}
                             <br /> <br />
                             {t('studioDescription.textPart3')}
-                            <Link href={""} className='text-nail-special2'> {t('bookNow')}</Link> <br />
-                            <Link href={""} className='text-nail-special2'> {t('exploreServices')}</Link>
+                            <Link href={"https://www.instagram.com/se_nailstudio"} className='text-nail-special2'> {t('bookNow')}</Link> <br />
+                            <Link href={"/services"} className='text-nail-special2'> {t('exploreServices')}</Link>
                         </p>
                     </div>
 
