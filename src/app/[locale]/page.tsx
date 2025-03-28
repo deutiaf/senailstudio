@@ -1,5 +1,4 @@
 import Advantages from "@/components/Advantages/Advantages";
-import CategoryCarroussel from "@/components/Advantages/CategoryCarroussel";
 import Booknow from "@/components/Booknow/Booknow";
 import Boutique from "@/components/Boutique/Boutique";
 import Faq from "@/components/Faq/Faq";

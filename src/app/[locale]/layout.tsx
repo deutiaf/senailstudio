@@ -8,7 +8,7 @@ import {
   Cormorant_Garamond,
   Cormorant_SC,
   Dancing_Script,
-  Geist,
+
   Geist_Mono,
   Inter,
   Josefin_Sans,
@@ -149,10 +149,13 @@ export default async function RootLayout({
   params: { locale: string };
 }>) {
 
-  // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  // Type-safe locale validation using a type assertion
+  const validLocales = routing.locales as readonly string[];
+  if (!validLocales.includes(locale)) {
     notFound();
   }
+
+
 
   // Providing all messages to the client
   // side is the easiest way to get started

@@ -9,8 +9,6 @@ import img4 from '@/../public/images/nail-nicdc.jpg'
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
-
-
 export default function Hero() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const images = [img2, img3, img1, img4];
@@ -21,18 +19,12 @@ export default function Hero() {
         }, 5000); // Change image every 5 seconds
 
         return () => clearInterval(interval); // Cleanup on component unmount
-    }, []);
-
+    }, [images.length]); // Added images.length to dependency array
 
     const t = useTranslations('Hero');
 
-
     return (
         <div className="bg-nail-special2 text-white flex flex-col lg:flex-row-reverse  h-[calc(100vh-4rem)]  w-screen  to-95% pt-7 md:pt-0 justify-start md:justify-center items-center xl:px-16">
-            {/* <div className="absolute  h-3/6 w-3/6 left-0 bottom-0 -z-20 overflow-hidden ">
-                <Image src={nail_texture} alt={`texture`} className="object-cover object-right absolute -bottom-25 lg:static  w-full h-full" />
-
-            </div> */}
             <div className="bg-nail-special2 mix-blend-color absolute h-3/6 w-3/6 left-0 bottom-0 -z-10"></div>
             <div className="  md:space-y-4 lg:space-y-0 lg:space-x-10 flex flex-col lg:flex-row h-full lg:max-h-10/12 w-full xl:w-10/12 max-w-[1500px] justify-start md:justify-center items-center ">
                 <div className=" h-1/6 md:h-2/6 lg:h-full lg:w-7/12 lg:mb-0 flex flex-col items-center justify-center  lg:space-y-16 ">
@@ -42,7 +34,6 @@ export default function Hero() {
                     </div>
                     <div className=" flex items-start w-fit mx-auto  ">
                         <div className="flex items-center h-fit space-x-3">
-
                             <Link href={''} className="hover:bg-nail-50 hover:text-nail-special2 hover:border-nail-special2 transition-colors duration-300 text-sm lg:text-lg text-nail-50 border border-nail-50 py-2 md:py-4 px-7 md:px-12 hidden lg:flex"  > {t("bookNowLink")}</Link>
                         </div>
                     </div>
@@ -78,10 +69,7 @@ export default function Hero() {
                     <p className=" md:hidden leading-5 pt-3 px-2   tracking-widest text-sm font-cinzel  text-center lg:text-left lg:w-full ">{t("desc")}</p>
                     <Link href={''} className="hover:bg-nail-50 hover:text-nail-special2 hover:border-nail-50 transition-colors duration-300 mt-3 w-fit mx-auto text-sm lg:text-lg text-nail-50 border border-nail-50 py-1  md:py-4 px-7 md:px-12 block lg:hidden "  > {t("bookNowLink")}</Link>
                 </div>
-
-
             </div>
-
         </div>
     );
 }

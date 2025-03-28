@@ -1,10 +1,8 @@
-import img1 from '@/../public/images/nail-eed.jpg'
 import img2 from '@/../public/images/nail-iznodo.jpg'
 import img3 from '@/../public/images/jenn-causing-8g9sStvDV34-unsplash.jpg'
 import img4 from '@/../public/images/giorgio-trovato-gb6gtiTZKB8-unsplash.jpg'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
 
 
 function Thebest() {

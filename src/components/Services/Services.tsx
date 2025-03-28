@@ -5,8 +5,7 @@ import img1 from '@/../public/images/nail-eed.jpg'
 import img2 from '@/../public/images/nail-iznodo.jpg'
 import img3 from '@/../public/images/nail-edfd.jpg'
 import img4 from '@/../public/images/nail-ojncovz.jpg'
-import CategoryCarroussel from './CategoryCarroussel'
-import { ArrowRight, ChevronRight, MoveRight } from 'lucide-react'
+import { ChevronRight, MoveRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/routing'
 
@@ -44,6 +43,9 @@ function Services() {
     ];
 
     useEffect(() => {
+        // Store the current value of sectionRef in a local variable
+        const currentSectionRef = sectionRef.current;
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 // Update state when intersection status changes
@@ -60,16 +62,17 @@ function Services() {
             }
         );
 
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
+        if (currentSectionRef) {
+            observer.observe(currentSectionRef);
         }
 
+        // Use the local variable in the cleanup function
         return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
+            if (currentSectionRef) {
+                observer.unobserve(currentSectionRef);
             }
         };
-    }, []);
+    }, []); // Empty dependency array since we're not using any external variables
 
     return (
         <section ref={sectionRef} className='pt-0 relative bg-white  lg:mb-0 overflow-hidden'>

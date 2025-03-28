@@ -1,5 +1,4 @@
 import React from 'react'
-import img1 from '@/../public/images/nail-ojncovz.jpg'
 import cert from '@/../public/images/certificate.png'
 import calendar from '@/../public/images/calendar.png'
 import sani from '@/../public/images/hand-sanitizer.png'

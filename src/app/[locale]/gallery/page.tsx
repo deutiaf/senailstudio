@@ -1,7 +1,9 @@
 "use client"
-
 import Image from 'next/image'
-import { useState } from 'react'
+import { StaticImageData } from 'next/image'
+import React, { MouseEvent, useState } from 'react';
+
+// Import images
 import img1 from '@/../public/images/nail-eed.jpg'
 import img2 from '@/../public/images/nail-iznodo.jpg'
 import img3 from '@/../public/images/nail-edfd.jpg'
@@ -18,10 +20,16 @@ import img13 from '@/../public/images/nail-ncoiz.jpg'
 import img14 from '@/../public/images/nail-nicdc.jpg'
 import img15 from '@/../public/images/nails_hero.jpg'
 
-function page() {
-    const [fullscreenImage, setFullscreenImage] = useState(null);
+// Define an interface for the image object
+interface ImageItem {
+    src: StaticImageData;
+    alt: string;
+}
 
-    const images = [
+function Gallery() {
+    const [fullscreenImage, setFullscreenImage] = useState<number | null>(null);
+
+    const images: ImageItem[] = [
         { src: img1, alt: 'Nail design 1' },
         { src: img2, alt: 'Nail design 2' },
         { src: img3, alt: 'Nail design 3' },
@@ -39,19 +47,19 @@ function page() {
         { src: img15, alt: 'Nail design 15' },
     ];
 
-    const openFullscreen = (index) => {
+    const openFullscreen = (index: number) => {
         setFullscreenImage(index);
         document.body.style.overflow = 'hidden';
     };
 
-    const closeFullscreen = (event) => {
-        event.stopPropagation();  // Empêche la propagation de l'événement
+    // Create a generic event handler that works with different HTML elements
+    const closeFullscreen = (event: MouseEvent<HTMLButtonElement | HTMLDivElement>) => {
+        event.stopPropagation(); // Prevents event propagation
         setFullscreenImage(null);
         document.body.style.overflow = 'auto';
     };
 
-
-    const navigateFullscreen = (direction) => {
+    const navigateFullscreen = (direction: number) => {
         if (fullscreenImage !== null) {
             const newIndex = (fullscreenImage + direction + images.length) % images.length;
             setFullscreenImage(newIndex);
@@ -60,8 +68,8 @@ function page() {
 
     return (
         <section className='w-screen py-40 relative overflow-hidden'>
-            <h1 className='z-30 text-center md:my-10 px-10 lg:px-0 font-bangers text-6xl md:text-9xl text-nail-special2 tracking-wider word-spacing-big'>IRENE'S GALLERY</h1>
-            <p className='z-30 w-10/12 lg:w-7/12 mx-auto my-8 md:my-16 text-center leading-7 font-poppins  text-sm md:text-lg text-neutral-600 word-spacing tracking-wider'>Explore our stunning collection of nail art designs, where creativity meets beauty. <br /> Whether you're looking for inspiration for your next manicure or seeking the perfect style to suit your personality, you're sure to find something you love here!</p>
+            <h1 className='z-30 text-center md:my-10 px-10 lg:px-0 font-bangers text-6xl md:text-9xl text-nail-special2 tracking-wider word-spacing-big'>IRENE&apos;S GALLERY</h1>
+            <p className='z-30 w-10/12 lg:w-7/12 mx-auto my-8 md:my-16 text-center leading-7 font-poppins  text-sm md:text-lg text-neutral-600 word-spacing tracking-wider'>Explore our stunning collection of nail art designs, where creativity meets beauty. <br /> Whether you&apos;re looking for inspiration for your next manicure or seeking the perfect style to suit your personality, you&apos;re sure to find something you love here!</p>
 
             {/* ---------------------------   Gallery Grid version desktop   ----------------*/}
             <div className="hidden z-30 md:grid grid-cols-6 grid-rows-12 gap-2 h-[100rem] *:rounded-3xl *:overflow-hidden *:relative w-11/12 lg:w-10/12 mx-auto">
@@ -396,4 +404,4 @@ function page() {
     )
 }
 
-export default page
+export default Gallery

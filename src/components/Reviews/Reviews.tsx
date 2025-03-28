@@ -1,22 +1,40 @@
 'use client'
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, JSX } from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl';
 
-function ImageCarousel({ maxTextLength = 150 }) {
+
+
+// Define the type for a slide
+interface Slide {
+    nom: string;
+    date: string;
+    note: number;
+    texte: string;
+    imageUrl: string | null;
+}
+
+// Define props type for the component
+interface ImageCarouselProps {
+    maxTextLength?: number;
+}
+
+function ImageCarousel({ maxTextLength = 150 }: ImageCarouselProps) {
 
     const t = useTranslations('ImageCarousel'); // Utilisation de useTranslations pour charger les traductions
 
-    const carouselRef = useRef(null)
-    const leftSideRef = useRef(null)
-    const rightSideRef = useRef(null)
-    const [currentSlide, setCurrentSlide] = useState(0)
-    const [expandedTexts, setExpandedTexts] = useState({})
-    const [isLeftVisible, setIsLeftVisible] = useState(false)
-    const [isRightVisible, setIsRightVisible] = useState(false)
+    // Explicitly type refs as RefObject with HTMLDivElement
+    const carouselRef = useRef<HTMLDivElement>(null)
+    const leftSideRef = useRef<HTMLDivElement>(null)
+    const rightSideRef = useRef<HTMLDivElement>(null)
+
+    const [currentSlide, setCurrentSlide] = useState<number>(0)
+    const [expandedTexts, setExpandedTexts] = useState<{ [key: number]: boolean }>({})
+    const [isLeftVisible, setIsLeftVisible] = useState<boolean>(false)
+    const [isRightVisible, setIsRightVisible] = useState<boolean>(false)
 
     // Tableau d'objets contenant les informations pour chaque slide
-    const slidesData = [
+    const slidesData: Slide[] = [
         {
             nom: "Angie Juha",
             date: "2025-03-01",
@@ -58,13 +76,13 @@ function ImageCarousel({ maxTextLength = 150 }) {
 
     // Configurer l'Intersection Observer
     useEffect(() => {
-        const options = {
+        const options: IntersectionObserverInit = {
             root: null,
             rootMargin: '0px',
             threshold: 0.7
         }
 
-        const observerLeft = new IntersectionObserver((entries) => {
+        const observerLeft = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     setIsLeftVisible(true)
@@ -73,7 +91,7 @@ function ImageCarousel({ maxTextLength = 150 }) {
             })
         }, options)
 
-        const observerRight = new IntersectionObserver((entries) => {
+        const observerRight = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     setIsRightVisible(true)
@@ -82,21 +100,27 @@ function ImageCarousel({ maxTextLength = 150 }) {
             })
         }, options)
 
-        if (leftSideRef.current) {
-            observerLeft.observe(leftSideRef.current)
+        // Store current refs in local variables to ensure stable reference in cleanup
+        const currentLeftRef = leftSideRef.current
+        const currentRightRef = rightSideRef.current
+
+        if (currentLeftRef) {
+            observerLeft.observe(currentLeftRef)
         }
 
-        if (rightSideRef.current) {
-            observerRight.observe(rightSideRef.current)
+        if (currentRightRef) {
+            observerRight.observe(currentRightRef)
         }
 
         return () => {
-            if (leftSideRef.current) observerLeft.unobserve(leftSideRef.current)
-            if (rightSideRef.current) observerRight.unobserve(rightSideRef.current)
+            if (currentLeftRef) observerLeft.unobserve(currentLeftRef)
+            if (currentRightRef) observerRight.unobserve(currentRightRef)
         }
     }, [])
 
-    const goToSlide = (index) => {
+
+    // Typed goToSlide function
+    const goToSlide = (index: number) => {
         setCurrentSlide(index)
         if (carouselRef.current) {
             const slideWidth = carouselRef.current.clientWidth
@@ -107,16 +131,16 @@ function ImageCarousel({ maxTextLength = 150 }) {
         }
     }
 
-    // Fonction pour basculer l'état de développement du texte
-    const toggleTextExpand = (index) => {
+    // Typed toggleTextExpand function
+    const toggleTextExpand = (index: number) => {
         setExpandedTexts(prev => ({
             ...prev,
             [index]: !prev[index]
         }))
     }
 
-    // Fonction pour tronquer le texte
-    const truncateText = (text, index) => {
+    // Typed truncateText function
+    const truncateText = (text: string, index: number) => {
         if (text.length <= maxTextLength || expandedTexts[index]) {
             return text
         }
@@ -125,7 +149,7 @@ function ImageCarousel({ maxTextLength = 150 }) {
                 {text.substring(0, maxTextLength)}...{' '}
                 <button
                     onClick={(e) => {
-                        e.stopPropagation() // Éviter de déclencher d'autres clics
+                        e.stopPropagation()
                         toggleTextExpand(index)
                     }}
                     className="text-nail-special2 font-medium hover:underline"
@@ -135,6 +159,7 @@ function ImageCarousel({ maxTextLength = 150 }) {
             </>
         )
     }
+
 
     // Auto-scrolling
     useEffect(() => {
@@ -171,8 +196,8 @@ function ImageCarousel({ maxTextLength = 150 }) {
     }, [currentSlide, slides])
 
     // Fonction pour afficher les étoiles basées sur la note
-    const renderRating = (rating) => {
-        const stars = [];
+    const renderRating = (rating: number) => {
+        const stars: JSX.Element[] = [];
         for (let i = 1; i <= 5; i++) {
             stars.push(
                 <span key={i} className={`text-xl ${i <= rating ? 'text-yellow-500' : 'text-gray-300'}`}>
@@ -183,8 +208,8 @@ function ImageCarousel({ maxTextLength = 150 }) {
         return stars;
     };
 
-    // Fonction pour obtenir la première lettre du nom
-    const getFirstLetter = (name) => {
+    // Typed getFirstLetter function
+    const getFirstLetter = (name: string) => {
         return name.charAt(0).toUpperCase();
     };
 
@@ -250,7 +275,7 @@ function ImageCarousel({ maxTextLength = 150 }) {
                                     </div>
                                     <div className="font-josefin-sans word-spacing">
                                         <p className="text-center p-7">
-                                            "{truncateText(slide.texte, index)}"
+                                            &quot{truncateText(slide.texte, index)}&quot
                                         </p>
                                     </div>
                                 </div>
