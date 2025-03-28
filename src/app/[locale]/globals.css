@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+
+  --color-nail: #908f8d;
+  --color-nail-special: #4e4e4d;
+  --color-nail-special2: #a1003e;
+  --color-nail-special3: #a88a04;
+  
+  --color-nail-vrai50: #edeae6;
+  --color-nail-50: #fbf0f6;
+
+  --color-nail-100: #e3d8d1;
+  --color-nail-200: #3ab7bf;
+  --color-nail-300: #3ab7bf;
+  --color-nail-700: #3ab7bf;
+  --color-nail-800: #414140;
+  --color-nail-850: #2d2d2d;
+  --color-nail-900: #171616;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-cinzel: var(--font-cinzel);
+  --font-cormorant-garamond: var(--font-cormorant-garamond);
+  --font-cormorant-sc: var(--font-cormorant-sc);
+  --font-dancing-script: var(--font-dancing-script);
+  --font-inter: var(--font-inter);
+  --font-josefin-sans: var(--font-josefin-sans);
+  --font-poppins: var(--font-poppins);
+  --font-roboto: var(--font-roboto);
+  --font-trirong: var(--font-trirong);
+  --font-rufina: var(--font-rufina);
+  --font-bangers: var(--font-bangers);
+  --font-cherry-bomb-one: var(--font-cherry-bomb-one);
+  --font-fontdiner-swanky: var(--font-fontdiner-swanky);
+
+  /* aspect ratio */
+  --aspect-16-9: 16 / 9;
+  --aspect-4-3: 4 / 3;
+  --aspect-1-1: 1 / 1;
+  --aspect-21-9: 21 / 9;
+  --aspect-21-7: 21 / 7;
+
+  --aspect-3-2: 3 / 2;
+  --aspect-5-4: 5 / 4;
+  --aspect-9-16: 9 / 16;
+  --aspect-2-1: 2 / 1;
+  --aspect-2-39-1: 2.39 / 1;
+  --aspect-4-5: 4 / 5; /* Nouvel aspect portrait */
+  --aspect-3-4: 3 / 4; /* Nouvel aspect portrait */
+}
+
+:root {
+  --background: #ffffff;
+  --test: #fbf0f6;
+  --foreground: #171717;
+}
+
+
+
+html {
+  color-scheme: light; /* Indique que seul le mode clair est supporté */
+  forced-color-adjust: none;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+   
+    color-scheme: light;
+    color-scheme: light only;
+
+
+  }
+}
+:root {
+  
+  color-scheme: light;
+  color-scheme: light only;
+
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-cinzel),Arial, Helvetica, sans-serif;
+}
+
+.word-spacing{
+  word-spacing: 0.20rem;
+}
+.word-spacing-big{
+  word-spacing: 0.40rem;
+}

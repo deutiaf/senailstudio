@@ -1,0 +1,257 @@
+{
+    "Menu":{
+        "home":"HOME",
+        "bookNow":"BOOK NOW",        
+        "gallery":"GALLERY",
+        "aboutUs":"ABOUT US"
+ 
+
+    },
+
+
+
+    "commenthero":"+++++++++++++++++++++++++++++++++++   hero   +++++++++++++++++++++++++++++++++++++++++++++++",
+
+
+
+    "Hero":{
+        "title1":"Elegance",
+        "title2": "At Your Fingertips",
+        "desc":"Get stunning nails at our space dedicated to hand and foot care. From classic to trendy designs, we provide expert services and creative nail art to match every style.",
+        "bookNowLink":"Book Now"
+
+    },
+
+
+
+
+    "comment1":"+++++++++++++++++++++++++++++++++++   the best   +++++++++++++++++++++++++++++++++++++++++++++++",
+
+
+
+    "Thebest":{
+        "title": "THE BEST"
+    },
+
+
+    "commentser":"+++++++++++++++++++++++++++++++++++   servives   +++++++++++++++++++++++++++++++++++++++++++++++",
+
+    "Services": {
+        "title": "Our Services",
+        "classicManicure": "Classic Manicure",
+        "classicManicureDescription": "A classic manicure includes cleaning, shaping, and polishing the nails. It also involves cuticle care and hand moisturizing for a polished and healthy look.",
+        "gelManicure": "Gel Manicure",
+        "gelManicureDescription": "A gel manicure involves the application of a gel polish that is cured under UV or LED light. It offers a longer-lasting finish, typically lasting 2-3 weeks without chipping.",
+        "acrylicNailExtensions": "Acrylic Nail Extensions",
+        "acrylicNailExtensionsDescription": "Acrylic nail extensions are artificial nails applied over your natural nails to add length and shape. These extensions are customizable and come in various styles and designs.",
+        "spaPedicure": "Spa Pedicure",
+        "spaPedicureDescription": "A spa pedicure is a luxurious treatment that includes exfoliation, foot massage, moisturizing, and nail care, along with a relaxing soak for your feet.",
+        "nailArtDesigns": "Nail Art Designs",
+        "nailArtDesignsDescription": "We offer a variety of custom nail art designs, including intricate patterns, rhinestones, and hand-painted artwork for your nails.",
+        "seeMore": "See More"
+    },
+    
+
+
+    "commentadv":"+++++++++++++++++++++++++++++++++++   advantages   +++++++++++++++++++++++++++++++++++++++++++++++",
+
+    "Advantages" :{
+        "title": "Our Advantages",
+        "licencedSpecialist": "Licenced Specialist",
+        "licencedSpecialistDescription": "You’ll be treated by a licensed specialist with extensive training and certification.",
+        "onlineBooking": "Online Booking",
+        "onlineBookingDescription": "Book your appointment whenever it suits you, with no hassle or long waiting times.",
+        "specialDeals": "Special Deals & Membership Offers",
+        "specialDealsDescription": "Join our membership for discounts, early access to services, and seasonal offers.",
+        "sanitizedSafeEnvironment": "Sanitized and Safe Environment",
+        "sanitizedSafeEnvironmentDescription": "We prioritize your health and safety with a fully sanitized and sterile environment."
+    },
+
+    "commentbook":"+++++++++++++++++++++++++++++++++++   book now   +++++++++++++++++++++++++++++++++++++++++++++++",
+
+    
+
+   "BookNow" : {
+        "title": "Book your appointment today!",
+        "description": "Ready to treat yourself to flawless nails? 💅✨\nBooking your next appointment is quick and easy—just a few clicks away.\nSecure your spot now and let us pamper you!",
+        "bookNowButton": "Book Now",
+        "imageAlt": "Beautiful nails and relaxing atmosphere"
+    },
+    
+
+    "commentrev":"+++++++++++++++++++++++++++++++++++   review   +++++++++++++++++++++++++++++++++++++++++++++++",
+
+    
+    "ImageCarousel": {
+            "h2": "See what our clients are saying!",
+            "p": "At se nail studio, we pride ourselves on providing high-quality service and customer satisfaction. Hear from our clients who have experienced the best nails in town!"
+    },
+    
+    "commenthour":"+++++++++++++++++++++++++++++++++++   hours   +++++++++++++++++++++++++++++++++++++++++++++++",
+
+
+    "BusinessHours": {
+        "businessHoursTitle": "Business Hours",
+        "Monday": "Monday",
+        "Tuesday": "Tuesday",
+        "Wednesday": "Wednesday",
+        "Thursday": "Thursday",
+        "Friday": "Friday",
+        "Saturday": "Saturday",
+        "Sunday": "Sunday",
+        "closed": "Closed",
+        "open": "Open"
+    },
+    
+
+    "commentbou":"+++++++++++++++++++++++++++++++++++   boutique   +++++++++++++++++++++++++++++++++++++++++++++++",
+
+    "Boutique":{
+        "title": "Discover SE NAIL STUDIO ",
+        "title2":"A Nail Art Sanctuary",
+        "description": "At SE NAIL STUDIO, every visit is an experience. Our modern, chic environment is the perfect place to treat yourself to a little luxury while we transform your nails into works of art.",
+        "imageAlt": "A beautifully designed nail art studio"
+    },
+    
+
+
+    "Faq":{
+        "title": "FAQ",
+        "faq": {
+          "manicureDefinition": "What is a professional manicure?",
+          "manicureDefinitionAnswer": "A professional manicure is a nail care treatment performed by an expert. It includes cleaning, shaping the nails, hydrating the hands, and sometimes applying polish or gel for well-maintained and long-lasting nails.",
+          
+          "typesOfPolish": "What types of nail polish do you offer?",
+          "typesOfPolishAnswer": "We offer a wide range of nail polishes, including classic nail polish, semi-permanent polish, and gel polish. You can also choose from custom colors and designs for your nails.",
+          
+          "pedicureForSensitiveFeet": "Are pedicure treatments suitable for sensitive feet?",
+          "pedicureForSensitiveFeetAnswer": "Yes, our pedicure treatments are suitable for all skin types, including sensitive feet. We use gentle and hypoallergenic products to avoid irritation.",
+          
+          "manicureDuration": "How long does a manicure last?",
+          "manicureDurationAnswer": "The duration of the manicure depends on the type of polish applied. A classic manicure lasts about a week, while a semi-permanent or gel manicure can last 2 to 3 weeks.",
+          
+          "nailStrengtheningTreatments": "Do you offer treatments to strengthen nails?",
+          "nailStrengtheningTreatmentsAnswer": "Yes, we offer specific treatments to strengthen nails, such as nourishing and hydrating treatments to prevent breakage and promote nail growth.",
+          
+          "manicureForDamagedNails": "Can I have a manicure if my nails are damaged?",
+          "manicureForDamagedNailsAnswer": "Yes, we offer treatments for damaged nails. We recommend a restorative manicure, which may include nourishing treatments and care to help regenerate the nail.",
+          
+          "nailExtensions": "Do you offer nail extensions?",
+          "nailExtensionsAnswer": "Yes, we offer nail extensions using techniques such as gel or acrylic. These extensions add length and shape to your nails.",
+          
+          "hypoallergenicProducts": "Are the products you use hypoallergenic?",
+          "hypoallergenicProductsAnswer": "Yes, we prioritize hypoallergenic products, especially for sensitive nails and feet. We use polishes and treatments that are suitable for sensitive skin.",
+          
+          "manicureDuringPregnancy": "Can I get a manicure or pedicure during pregnancy?",
+          "manicureDuringPregnancyAnswer": "Yes, manicure and pedicure treatments are safe during pregnancy. We use gentle products to ensure the safety and comfort of the expecting mother.",
+          
+          "customNailDesigns": "Do you offer custom nail designs?",
+          "customNailDesignsAnswer": "Yes, we offer custom nail designs, including patterns, decorations, hand-drawn designs, and special effects to make your nails unique.",
+          
+          "manicureSessionTime": "How long does a manicure session take?",
+          "manicureSessionTimeAnswer": "A classic manicure session takes about 30 to 45 minutes. Manicures with gel or semi-permanent polish typically last between 45 minutes and 1 hour."
+        }
+      },
+      
+    
+"Footer":{
+    "joinCommunityTitle": "Join our community!",
+    "joinCommunityDescription": "Subscribe to our newsletter for exclusive tips, special offers, and professional advice for perfect at-home manicures.",
+    "joinButton": "Join",
+    "emailPlaceholder": "email...",
+    "aboutTitle": "About",
+    "home": "Home",
+    "aboutUs": "About Us",
+    "services": "Services",
+    "faq": "FAQ",
+    "gallery": "Gallery",
+    "infoTitle": "Info",
+    "address": "Charilaou Michael 1a, Agios Dometios 2365",
+    "allRightsReserved": "All Rights Reserved. Licensing"
+},
+
+
+
+"AboutUs":{
+    "aboutUs": {
+    "title": "About Us",
+    "description": {
+      "textPart1": "Discover who we are, our story, and the passion behind our nail art services. From humble beginnings to becoming a top destination for manicure enthusiasts, we’re here to share our journey and connect with you. ",
+      "textPart2": "Learn about our team, values, and how to reach out to us!!"
+    }
+},
+   
+    "whoIAm": "Who I Am",
+    "discoverBeauty": "Discover Our Beauty Establishment in Nicosia",
+    "contactUs": "Contact Us",
+    "writeToUs": "Write To Us",
+    "howToFindUs": "How To Find Us",
+    "bookNow": "Book now!",
+    "exploreServices": "Explore our services here!",
+    "ourStory": {
+                "title": "Our Story",
+                "whoAmI": {
+                "title": "Who I Am",
+                "textPart1": "Eirini Stevenson is the proud owner of SE Nail Studio, a passionate nail artist, and a dedicated entrepreneur with a wealth of experience in the beauty industry. With a diploma in Beauty Therapy, Eirini has been perfecting her craft for over 10 years, starting her career as an employee at a beauty establishment in Cyprus. Her journey then took her to working independently from home before opening her own salon, SE Nail Studio.",
+                "textPart2": "  Driven by her love for nail artistry and entrepreneurship, Eirini Stevenson has built a reputation for offering exceptional, personalized nail services. With a focus on high-quality work and client satisfaction, she continues to evolve her skills to stay ahead of the latest trends.",
+                "textPart3":"  At SE Nail Studio, Eirini combines technical expertise and creativity to deliver unique nail designs tailored to each client. Her passion and dedication make her stand out in the beauty industry. Whether you want a classic manicure or a bold, trendy look, Eirini and her team are here to make your nail dreams a reality!"
+                          
+                }
+},
+    "studioDescription": {
+        "title": "Découvrez notre établissement de beauté à Nicosie-Engomi",
+        "textPart1": " Welcome to SE Nail Studio, a cozy and vibrant space in Nicosia-Engomi where creativity and relaxation come together. With a passion for nails and a commitment to quality, we’ve created a warm, welcoming environment for all your beauty needs.",
+        "textPart2": " Our salon is a place to unwind and indulge in professional nail care, with a team dedicated to providing you with exceptional service. Whether you're here for a quick mani-pedi or a complete nail transformation, we guarantee a personalized experience that will leave you feeling refreshed and confident. ",
+        "textPart3": " We make booking your next appointment easy with our online booking system, so you can reserve your spot at your convenience.",
+        "bookingLink": "Réservez maintenant !",
+        "servicesLink": "Explorez nos services ici !"
+      }
+    },
+  
+  
+
+
+    
+        "ServicesPage": {
+          "title": "Our Services",
+          "manicure": "Manicure",
+          "pedicure": "Pedicure",
+          "otherServices": "Other Services",
+          "classicManicure": "Classic Manicure",
+          "classicManicureDescription": "A classic manicure includes cleaning, shaping, and polishing the nails. It also involves cuticle care and hand moisturizing for a polished and healthy look.",
+          "gelManicure": "Gel Manicure",
+          "gelManicureDescription": "A gel manicure involves the application of a gel polish that is cured under UV or LED light. It offers a longer-lasting finish, typically lasting 2-3 weeks without chipping.",
+          "acrylicNailExtensions": "Acrylic Nail Extensions",
+          "acrylicNailExtensionsDescription": "Acrylic nail extensions are artificial nails applied over your natural nails to add length and shape. These extensions are customizable and come in various styles and designs.",
+          "nailArtDesigns": "Nail Art Designs",
+          "nailArtDesignsDescription": "We offer a variety of custom nail art designs, including intricate patterns, rhinestones, and hand-painted artwork for your nails.",
+          "paraffinWaxManicure": "Paraffin Wax Manicure",
+          "paraffinWaxManicureDescription": "A paraffin wax manicure involves dipping your hands into warm paraffin wax to moisturize and soften the skin, followed by nail care and shaping.",
+          "shellacManicure": "Shellac Manicure",
+          "shellacManicureDescription": "Shellac is a hybrid nail treatment that combines the ease of a polish with the durability of gel. It is applied like a regular nail polish but lasts much longer.",
+          "spaPedicure": "Spa Pedicure",
+          "spaPedicureDescription": "A spa pedicure is a luxurious treatment that includes exfoliation, foot massage, moisturizing, and nail care, along with a relaxing soak for your feet.",
+          "classicPedicure": "Classic Pedicure",
+          "classicPedicureDescription": "A classic pedicure involves nail trimming, shaping, cuticle care, and a foot massage, followed by the application of nail polish for a clean and polished finish.",
+          "deluxePedicure": "Deluxe Pedicure",
+          "deluxePedicureDescription": "A deluxe pedicure is a more intensive treatment that includes everything from a classic pedicure, plus a hydrating mask, exfoliation, and a longer foot massage.",
+          "nailRepair": "Nail Repair",
+          "nailRepairDescription": "Nail repair involves fixing broken or damaged nails, restoring them to their natural shape and appearance.",
+          "cuticleCare": "Cuticle Care",
+          "cuticleCareDescription": "Cuticle care involves pushing back and moisturizing the cuticles, helping to keep nails healthy and looking neat.",
+          "nailStrengtheningTreatment": "Nail Strengthening Treatment",
+          "nailStrengtheningTreatmentDescription": "A nail strengthening treatment is designed to nourish and strengthen weak or brittle nails, helping them grow stronger and healthier.",
+          "nailRemoval": "Nail Removal",
+          "nailRemovalDescription": "Nail removal services are offered to safely and gently remove artificial nails, such as acrylics or gel, without damaging your natural nails.",
+          "footScrub": "Foot Scrub",
+          "footScrubDescription": "A foot scrub treatment involves exfoliating the feet to remove dead skin cells and promote softer, smoother skin."
+        
+      }
+
+}
+
+
+
+
+
+
