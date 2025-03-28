@@ -13,7 +13,6 @@ import man from '@/../public/images/anna-keibalo-LZmPAULkFUc-unsplash.jpg'
 import man3 from '@/../public/images/jesse-donoghoe-2aiP_wxNrfU-unsplash.jpg'
 import man2 from '@/../public/images/giorgio-trovato-gb6gtiTZKB8-unsplash.jpg'
 import { ChevronRight } from 'lucide-react'
-import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 

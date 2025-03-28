@@ -1,15 +1,13 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 
-// Define a type for business hours
 type BusinessHour = {
     day: string;
     hours: string;
 };
 
-// Define props type
 type BusinessHoursProps = {
     bgColor?: string;
     currentDayTextColor?: string;
@@ -38,8 +36,8 @@ const BusinessHours: React.FC<BusinessHoursProps> = ({
     const [currentDay, setCurrentDay] = useState<string>('');
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
-    // Explicitly type the hours array
-    const hours: BusinessHour[] = [
+    // Mémorisation du tableau des horaires d'ouverture
+    const hours: BusinessHour[] = useMemo(() => [
         { day: 'Monday', hours: '10 am–7 pm' },
         { day: 'Tuesday', hours: 'Closed' },
         { day: 'Wednesday', hours: '10 am–7 pm' },
@@ -47,55 +45,57 @@ const BusinessHours: React.FC<BusinessHoursProps> = ({
         { day: 'Friday', hours: '10 am–6 pm' },
         { day: 'Saturday', hours: '9 am–3 pm' },
         { day: 'Sunday', hours: 'Closed' }
-    ];
+    ], []); // Le tableau est mémorisé et ne sera recalculé que si ses dépendances changent
 
-    // Add type annotations to function parameters
-    const checkIfOpen = (day: string, time: string): boolean => {
-        const dayInfo = hours.find(h => h.day === day);
-        if (!dayInfo || dayInfo.hours === 'Closed') return false;
+    // Fonction pour convertir l'heure en minutes
+    const timeToMinutes = (timeStr: string): number => {
+        const [hourStr, minuteStr] = timeStr.split(':');
+        let hour = parseInt(hourStr);
+        const isPM = timeStr.toLowerCase().includes('pm') && hour < 12;
+        const isAM = timeStr.toLowerCase().includes('am') && hour === 12;
 
-        const [openTime, closeTime] = dayInfo.hours.split('–');
+        if (isPM) hour += 12;
+        if (isAM) hour = 0;
 
-        // Explicitly type the timeToMinutes function
-        const timeToMinutes = (timeStr: string): number => {
-            const [hourStr, minuteStr] = timeStr.split(':');
-            let hour = parseInt(hourStr);
-            const isPM = timeStr.toLowerCase().includes('pm') && hour < 12;
-            const isAM = timeStr.toLowerCase().includes('am') && hour === 12;
-
-            if (isPM) hour += 12;
-            if (isAM) hour = 0;
-
-            const minute = minuteStr ? parseInt(minuteStr) : 0;
-            return hour * 60 + minute;
-        };
-
-        // Add type annotation to extractTime function
-        const extractTime = (timeStr: string): string => {
-            const trimmed = timeStr.trim().toLowerCase();
-            const hour = parseInt(trimmed);
-            const isPM = trimmed.includes('pm');
-
-            return `${isPM && hour !== 12 ? hour + 12 : (hour === 12 && !isPM ? 0 : hour)}:00`;
-        };
-
-        const openMinutes = timeToMinutes(extractTime(openTime));
-        const closeMinutes = timeToMinutes(extractTime(closeTime));
-
-        // Explicitly type the time parsing
-        const [currentHour, currentMinute] = time.split(':').map(Number);
-        const currentMinutes = currentHour * 60 + currentMinute;
-
-        return currentMinutes >= openMinutes && currentMinutes < closeMinutes;
+        const minute = minuteStr ? parseInt(minuteStr) : 0;
+        return hour * 60 + minute;
     };
 
+    // Fonction pour extraire l'heure au format HH:MM
+    const extractTime = (timeStr: string): string => {
+        const trimmed = timeStr.trim().toLowerCase();
+        const hour = parseInt(trimmed);
+        const isPM = trimmed.includes('pm');
+
+        return `${isPM && hour !== 12 ? hour + 12 : (hour === 12 && !isPM ? 0 : hour)}:00`;
+    };
+
+
     useEffect(() => {
+
+
+        // Fonction pour vérifier si l'établissement est ouvert
+        const checkIfOpen = (day: string, time: string): boolean => {
+            const dayInfo = hours.find(h => h.day === day);
+            if (!dayInfo || dayInfo.hours === 'Closed') return false;
+
+            const [openTime, closeTime] = dayInfo.hours.split('–');
+
+            const openMinutes = timeToMinutes(extractTime(openTime));
+            const closeMinutes = timeToMinutes(extractTime(closeTime));
+
+            const [currentHour, currentMinute] = time.split(':').map(Number);
+            const currentMinutes = currentHour * 60 + currentMinute;
+
+            return currentMinutes >= openMinutes && currentMinutes < closeMinutes;
+        };
+
+        // Fonction pour mettre à jour le jour actuel et l'état d'ouverture
         const updateDateTime = () => {
             const now = new Date();
             const days: string[] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
             const day = days[now.getDay()];
 
-            // Format time as HH:MM
             const hours = now.getHours();
             const minutes = now.getMinutes().toString().padStart(2, '0');
             const timeString = `${hours}:${minutes}`;
@@ -105,10 +105,21 @@ const BusinessHours: React.FC<BusinessHoursProps> = ({
         };
 
         updateDateTime();
-        const interval = setInterval(updateDateTime, 60000); // Update every minute
+        const interval = setInterval(updateDateTime, 60000); // Mise à jour chaque minute
 
-        return () => clearInterval(interval);
-    }, []);
+        const handleVisibilityChange = () => {
+            if (!document.hidden) {
+                updateDateTime();
+            }
+        };
+
+        document.addEventListener("visibilitychange", handleVisibilityChange);
+
+        return () => {
+            clearInterval(interval);
+            document.removeEventListener("visibilitychange", handleVisibilityChange);
+        };
+    }, [hours]); // Ajout de 'hours' dans le tableau des dépendances
 
     return (
         <div className={`w-full mx-auto ${bgColor} overflow-hidden text-sm font-josefin-sans`}>
