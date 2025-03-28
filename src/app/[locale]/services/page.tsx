@@ -16,13 +16,20 @@ import { ChevronRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 
+
+
+// Define types for image IDs
+type ManicureImageId = 'img1' | 'img2' | 'img3' | 'img4';
+type PedicureImageId = 'ped1' | 'ped2' | 'ped3' | 'ped4';
+type OtherServiceImageId = 'man' | 'man2-1' | 'man2-2' | 'man3';
+
 function Services() {
     const t = useTranslations('ServicesPage');
 
-    // State to track which image is in front for each gallery
-    const [frontImageManicure, setFrontImageManicure] = useState(null);
-    const [frontImagePedicure, setFrontImagePedicure] = useState(null);
-    const [frontImageOther, setFrontImageOther] = useState(null);
+    // State with proper type annotations
+    const [frontImageManicure, setFrontImageManicure] = useState<ManicureImageId | null>(null);
+    const [frontImagePedicure, setFrontImagePedicure] = useState<PedicureImageId | null>(null);
+    const [frontImageOther, setFrontImageOther] = useState<OtherServiceImageId | null>(null);
 
     // Première variable: 6 services de manucure
     const manicureServices = [
@@ -106,20 +113,21 @@ function Services() {
         }
     ];
 
-    // Function to handle image click for manicure section
-    const handleManicureImageClick = (imageId) => {
+    // Function to handle image click for manicure section with type annotation
+    const handleManicureImageClick = (imageId: ManicureImageId) => {
         setFrontImageManicure(imageId);
     };
 
-    // Function to handle image click for pedicure section
-    const handlePedicureImageClick = (imageId) => {
+    // Function to handle image click for pedicure section with type annotation
+    const handlePedicureImageClick = (imageId: PedicureImageId) => {
         setFrontImagePedicure(imageId);
     };
 
-    // Function to handle image click for other services section
-    const handleOtherImageClick = (imageId) => {
+    // Function to handle image click for other services section with type annotation
+    const handleOtherImageClick = (imageId: OtherServiceImageId) => {
         setFrontImageOther(imageId);
     };
+
 
     return (
         <section className='pt-0 relative bg-white mb-52 lg:mb-0 overflow-x-hidden'>
