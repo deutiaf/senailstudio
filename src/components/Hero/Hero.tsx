@@ -30,7 +30,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-nail-special2 z-10"></div>
 
             {/* Background image div - positioned below the gradient */}
-            <div className="absolute h-2/6 w-full bottom-0 overflow-hidden md:hidden z-10 bg-gradient-to-b from-transparent to-pink-950">
+            <div className="absolute h-2/6 w-full bottom-0 overflow-hidden md:hidden z-10  bg-nail-special2">
             </div>
 
             {/* Gradient overlay - positioned above the image */}
