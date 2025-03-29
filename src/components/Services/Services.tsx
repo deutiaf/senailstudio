@@ -46,7 +46,7 @@ function Services() {
     const images = [
         {
             src: img4,
-            position: "shadow-black shadow-2xl overflow-hidden aspect-3-4 shrink-0 w-4/12 md:w-4/12 lg:w-4/12 absolute inset-0 m-auto bottom-80 md:bottom-96 lg:bottom-80 right-96 bg-violet-400 rounded-2xl",
+            position: "shadow-black shadow-2xl overflow-hidden aspect-3-4 shrink-0 w-5/12 md:w-4/12 lg:w-4/12 absolute inset-0 m-auto bottom-80 md:bottom-96 lg:bottom-80 right-96 bg-violet-400 rounded-2xl",
             zIndex: 40
         },
         {
@@ -132,7 +132,7 @@ function Services() {
                                     </label>
                                 </div>
                             ))}
-                            <div className='w-full mb-10 md:w-2/5 lg:w-3/5 mx-auto mt-10 text-sm lg:text-lg font-extralight hover:text-nail-special2 transition-all duration-200 tracking-[0.4rem]'>
+                            <div className='w-full mb-10 md:w-2/5 lg:w-3/5 mx-auto mt-10 text-lg font-light hover:text-nail-special2 transition-all duration-200 tracking-[0.4rem]'>
                                 <Link href={'/services'} className=' group flex items-center justify-center space-x-2 lg:space-x-4'>
                                     <div className='hidden lg:block w-2/12 border-b group-hover:scale-x-150 origin-left transition-all duration-300'></div>
                                     <span className='group-hover:translate-x-10 transition-all duration-700'>{t('seeMore')} </span>
@@ -145,7 +145,7 @@ function Services() {
 
                 {/* Images Section */}
                 <div
-                    className={`flex items-start justify-start origin-top scale-75 md:scale-100 lg:w-3/6 md:w-10/12 w-full mx-auto relative h-[680px] md:mb-32 -mb-28 transition-all duration-1000 ease-out ${isVisible
+                    className={`hidden lg:flex items-start justify-start origin-top scale-90 md:scale-100 lg:w-3/6 md:w-10/12 w-full mx-auto relative h-[680px] md:mb-32 -mb-14 transition-all duration-1000 ease-out ${isVisible
                         ? 'translate-x-0 opacity-100'
                         : 'translate-x-full opacity-0'
                         }`}
@@ -166,7 +166,7 @@ function Services() {
                             <Image
                                 alt={`Nail service image ${index + 1}`}
                                 src={image.src}
-                                className='object-cover h-full w-full cursor-pointer'
+                                className='object-cover h-full w-full cursor-pointer '
                             />
                         </div>
                     ))}

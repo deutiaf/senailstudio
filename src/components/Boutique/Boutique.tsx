@@ -14,7 +14,7 @@ function Boutique() {
 
                 <div className='  flex flex-col md:flex-row items-center space-y-10 md:space-y-0 md:space-x-5 lg:space-x-16  md:border-none  md:pt-0'>
 
-                    <div className="w-full md:w-1/2  space-y-9 lg:space-y-5">
+                    <div className=" flex  flex-col  items-center md:items-start  w-full md:w-1/2  space-y-9 lg:space-y-5">
                         <h2 className='text-xl text-center lg:text-left lg:text-3xl text-nowrap font-poppins leading-8 lg:leading-10 tracking-wide md:tracking-widest word-spacing-big font-semibold text-neutral-800'>
                             {t('title')} <br /> {t('title2')}
                         </h2>

@@ -7,21 +7,21 @@ function Footer() {
     const t = useTranslations('Footer');  // Utilisation de useTranslations pour charger les traductions du Footer
 
     return (
-        <footer className="bg-nail-850 relative  ">
-            <div className="  w-screen max-w-[1700px] mx-auto pl-10 lg:pl-0 flex flex-col-reverse lg:flex-row pt-[340px] md:pt-[720px] lg:pt-0 px-3 md:px-28 lg:px-0 space-y-14 lg:space-y-0">
+        <footer className="bg-nail-850 relative   ">
+            <div className=" w-screen max-w-[1700px] mx-auto pl-10 lg:pl-0 flex flex-col-reverse lg:flex-row pt-[340px] md:pt-[720px] lg:pt-0 px-3 md:px-28 lg:px-0 space-y-14 lg:space-y-0">
                 <div className="lg:w-4/12 lg:pt-14">
                     <div className="w-10/12 md:w-7/12 lg:w-11/12 xl:w-8/12 lg:mx-auto">
                         <BusinessHours headerBgColor="bg-nail-850" regularTextColor="text-neutral-300" />
                     </div>
                 </div>
 
-                <div className="bg-nail-850 w-11/12 md:w-9/12 mx-auto lg:mx-5 mb-0 lg:w-4/12 aspect-square rounded-full absolute lg:relative -top-14 lg:-top-32 left-0 right-0 lg:bottom-24">
+                <div className=" bg-nail-850 w-11/12 md:w-9/12 mx-auto lg:mx-5 mb-0 lg:w-4/12 aspect-square rounded-full absolute lg:relative -top-14 lg:-top-32 left-0 right-0 lg:bottom-24">
                     <div className="rounded-full bg-white size-full border-nail-850 border-4 pt-12">
                         <div className="h-full flex flex-col justify-center items-center ">
                             <h2 className="px-2 xl:px-0 font-cinzel text-nail-850 tracking-tighter text-2xl md:text-3xl lg:text-xl xl:text-2xl pt-3 lg:pt-2 xl:pt-3 font-medium w-4/5 md:w-3/5 lg:w-4/5 xl:w-3/5 mx-auto leading-7 md:leading-10 lg:leading-6 xl:leading-8 text-center">
                                 {t('joinCommunityTitle')} {/* Texte traduit */}
                             </h2>
-                            <p className="font-inter text-xs md:text-lg lg:text-xs xl:text-sm tracking-wider font-medium md:w-4/5 lg:w-11/12 xl:w-4/5 mx-auto leading-5 md:leading-6 lg:leading-4 xl:leading-6 px-7 lg:px-0 xl:px-7 text-center text-zinc-500 italic mt-3">
+                            <p className="font-inter text-sm tracking-wider font-medium md:w-4/5 lg:w-11/12 xl:w-4/5 mx-auto leading-5 md:leading-6 lg:leading-4 xl:leading-6 px-7 lg:px-0 xl:px-7 text-center text-zinc-500 italic mt-3">
                                 {t('joinCommunityDescription')} {/* Texte traduit */}
                             </p>
                             <form action="" className="w-full flex flex-col items-center pt-5 md:pt-9 lg:pt-4 xl:pt-5">
@@ -34,7 +34,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className="lg:w-2/12 text-neutral-300 pt-14 space-y-5">
+                <div className="lg:w-2/12 text-neutral-300 pt-14 space-y-5 ">
                     <h3 className="text-white text-xl md:text-2xl font-medium">{t('aboutTitle')}</h3>
 
                     <ul className="space-y-2 md:text-xl lg:text-sm lg:space-y-4 font-josefin-sans">

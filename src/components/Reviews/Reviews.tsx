@@ -215,15 +215,15 @@ function ImageCarousel({ maxTextLength = 150 }: ImageCarouselProps) {
 
     return (
         <section className="mb-10 md:mb-20 mt-20 overflow-hidden py-10 text-sm md:text-lg text-zinc-600 px-4 lg:px-20 xl:px-32 leading-6 md:leading-tight relative">
-            <div className=' mx-auto max-w-[1700px] items-center w-full flex flex-col md:flex-row'>
+            <div className='justify-center mx-auto max-w-[1700px] items-center w-full flex flex-col md:flex-row'>
                 <div
                     ref={leftSideRef}
-                    className={`md:w-1/2 md:border-r-[0.5px] md:pr-10 space-y-5 word-spacing font-poppins transition-all delay-300 duration-1000 ease-out transform ${isLeftVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}
+                    className={`flex flex-col  items-center md:items-start justify-center md:w-1/2 md:border-r-[0.5px] md:pr-10 space-y-5 word-spacing font-poppins transition-all delay-300 duration-1000 ease-out transform ${isLeftVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}
                 >
-                    <h2 className='text-5xl lg:text-7xl text-zinc-800 leading-14 lg:leading-20'>
+                    <h2 className='w-11/12   text-5xl lg:text-7xl text-zinc-800 leading-14 lg:leading-20'>
                         {t('h2')}
                     </h2>
-                    <p className='leading-6 font-normal text-[16px] md:leading-8 text-neutral-600'>
+                    <p className=' w-11/12    md:w-full pb-10 md:pb-0 leading-7  word-spacing-big tracking-wide font-medium text-[16px] md:leading-8 text-neutral-600'>
                         {t('p')}
                     </p>
                 </div>
@@ -246,7 +246,7 @@ function ImageCarousel({ maxTextLength = 150 }: ImageCarouselProps) {
                             >
                                 <div className=" shadow-black/10 shadow-lg md:shadow-none z-40 relative w-full overflow-hidden space-y-3 flex flex-col items-center justify-center">
                                     <div className='w-auto flex flex-col space-x-4 justify-center'>
-                                        <div className='flex flex-col space-x-4 w-fit justify-center items-center mx-auto'>
+                                        <div className='flex flex-col space-x-4 w-fit justify-center items-center mx-auto '>
                                             <div className=' mb-3 mx-auto aspect-1-1 overflow-hidden relative h-full size-16'>
                                                 {slide.imageUrl ? (
                                                     <Image
@@ -274,7 +274,7 @@ function ImageCarousel({ maxTextLength = 150 }: ImageCarouselProps) {
                                         </div>
                                     </div>
                                     <div className="  z-20 font-josefin-sans word-spacing">
-                                        <p className="text-center p-7">
+                                        <p className="text-center text-lg p-7">
                                             &quot;{truncateText(slide.texte, index)}&quot;
                                         </p>
                                     </div>
@@ -302,7 +302,7 @@ function ImageCarousel({ maxTextLength = 150 }: ImageCarouselProps) {
 
             {/*    -------------------------------    DESIGN  ---------------------     */}
 
-            <div className="h-96 overflow-hidden lg:grid grid-cols-5 grid-rows-5 gap-1 -rotate-12 w-1/12 right-0 top-0 lg:bottom-0 absolute origin-top-right text-nail-special2">
+            <div className="hidden h-96 overflow-hidden lg:grid grid-cols-5 md:grid-rows-5 gap-1 -rotate-12 w-1/12 right-0 top-0 lg:bottom-0 absolute origin-top-right text-nail-special2">
                 {/* Première rangée */}
                 <div className="col-span-2 row-start-1 font-cherry-bomb-one text-4xl overflow-hidden">Polished Perfection</div>
                 <div className="col-start-3 row-start-1 font-fontdiner-swanky text-2xl"> Nail Art Studio</div>

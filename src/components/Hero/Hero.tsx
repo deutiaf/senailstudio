@@ -40,7 +40,7 @@ export default function Hero() {
             <div className="z-30 md:space-y-4 lg:space-y-0 lg:space-x-10 flex flex-col lg:flex-row h-full lg:max-h-10/12 w-full xl:w-10/12 max-w-[1500px] justify-start md:justify-center items-center">
                 <div className="h-1/6 md:h-2/6 lg:h-full lg:w-7/12 lg:mb-0 flex flex-col items-center justify-center lg:space-y-16">
                     <div className="md:space-y-8 lg:space-y-6 lg:h-full lg:pl-5 xl:pl-0 flex flex-col lg:justify-center">
-                        <h1 className="text-nail-50 font-inter font-light scale-y-75 leading-8 md:leading-11 lg:leading-20 lg:tracking-tight text-5xl md:text-6xl lg:text-8xl text-center lg:text-left px-2 md:px-14 lg:px-0"><p className=""><span className="text-lime-300 z-30 font-serif">{t('title1')}</span> {t('title2')} </p></h1>
+                        <h1 className="text-nail-50 font-inter font-light scale-y-75 leading-11 lg:leading-20 lg:tracking-tight text-5xl md:text-6xl lg:text-8xl text-center lg:text-left px-2 md:px-14 lg:px-0"><p className=""><span className="text-lime-300 z-30 font-serif">{t('title1')}</span> {t('title2')} </p></h1>
                         <p className="hidden md:block leading-7 tracking-widest text-sm text-center lg:text-left lg:w-full w-5/6 mx-auto">{t("desc")}</p>
                     </div>
                     <div className="flex items-start w-fit mx-auto">
@@ -54,9 +54,9 @@ export default function Hero() {
                         {images.map((img, index) => (
                             <div
                                 key={index}
-                                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentImageIndex === index ? "opacity-100" : "opacity-0"}`}
+                                className={`bg-nail-special2 absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentImageIndex === index ? "opacity-100" : "opacity-0"}`}
                             >
-                                <Image src={img} alt={`hero-${index}`} className="object-cover w-full h-full" />
+                                <Image src={img} alt={`hero-${index}`} className="mix-blend-lighten object-cover w-full h-full" />
                             </div>
                         ))}
                     </div>
