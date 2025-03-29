@@ -42,47 +42,49 @@ function Menu() {
   }, []);
 
   return (
-    <div className="shadow-2xl flex w-screen px-2 lg:px-7 bg-nail-special2 text-white h-full justify-around items-center font-josefin-sans font-light tracking-[0.15rem] text-xs ">
-      {/* ---------------------- MOBILE ----------------------------- */}
-      <MobileMenu />
-      {/* --------------------- DESKTOP ------------------------------ */}
-      <div className="1/5 lg:w-2/5 h-full hidden lg:block ">
-        <ul className="flex space-x-6 h-full items-center ">
-          <li><Link href={"/"}>{t('home')}</Link></li>
-          <li><Link href={"https://www.instagram.com/se_nailstudio"}>{t('bookNow')}</Link></li>
-          <li><Link href={"/gallery"}>{t('gallery')}</Link></li>
-          <li><Link href={"/about-us"}>{t('aboutUs')}</Link></li>
-        </ul>
-      </div>
-      <div className="w-3/5 lg:w-1/5 flex justify-center items-center ">
-        <div className="font-josefin-sans text-center text-white text-xs md:text-sm font-medium tracking-[0.3rem] md:tracking-[0.5rem]">SE NAIL STUDIO</div>
-      </div>
-      <div className=" 1/5 lg:w-2/5 flex font-josefin-sans font-light text-sm justify-end items-center ">
-        <div className="relative" ref={langMenuRef}>
-          <button
-            className=" cursor-pointer flex items-center space-x-1 md:space-x-2"
-            onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-          >
-            <Earth strokeWidth={0.5} className="size-5" />
-            <span className="hidden md:block">{currentLocale === 'en' ? 'English' : 'Greek'}</span>
-            <span className=" md:hidden">{currentLocale === 'en' ? 'En' : 'Gr'}</span>
+    <div className="bg-nail-special2 h-full shadow-2xl ">
+      <div className=" w-screen max-w-[1700px] mx-auto  flex px-2 lg:px-7  text-white h-full justify-around items-center font-josefin-sans font-light tracking-[0.15rem] text-xs ">
+        {/* ---------------------- MOBILE ----------------------------- */}
+        <MobileMenu />
+        {/* --------------------- DESKTOP ------------------------------ */}
+        <div className="1/5 lg:w-2/5 h-full hidden lg:block ">
+          <ul className="flex space-x-6 h-full items-center ">
+            <li><Link href={"/"}>{t('home')}</Link></li>
+            <li><Link href={"https://www.instagram.com/se_nailstudio"}>{t('bookNow')}</Link></li>
+            <li><Link href={"/gallery"}>{t('gallery')}</Link></li>
+            <li><Link href={"/about-us"}>{t('aboutUs')}</Link></li>
+          </ul>
+        </div>
+        <div className="w-3/5 lg:w-1/5 flex justify-center items-center ">
+          <div className="font-josefin-sans text-center text-white text-xs md:text-sm font-medium tracking-[0.3rem] md:tracking-[0.5rem]">SE NAIL STUDIO</div>
+        </div>
+        <div className=" 1/5 lg:w-2/5 flex font-josefin-sans font-light text-sm justify-end items-center ">
+          <div className="relative" ref={langMenuRef}>
+            <button
+              className=" cursor-pointer flex items-center space-x-1 md:space-x-2"
+              onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+            >
+              <Earth strokeWidth={0.5} className="size-5" />
+              <span className="hidden md:block">{currentLocale === 'en' ? 'English' : 'Greek'}</span>
+              <span className=" md:hidden">{currentLocale === 'en' ? 'En' : 'Gr'}</span>
 
-            <ChevronDown strokeWidth={1} size={16} className={`transition-transform ${isLangMenuOpen ? 'rotate-180' : ''}`} />
-          </button>
+              <ChevronDown strokeWidth={1} size={16} className={`transition-transform ${isLangMenuOpen ? 'rotate-180' : ''}`} />
+            </button>
 
-          {isLangMenuOpen && (
-            <ul className="absolute top-full right-0 mt-2 bg-nail-special2 shadow-lg rounded-md py-1 z-10 min-w-24">
-              {languages.map((language) => (
-                <li
-                  key={language.code}
-                  className={`px-4 py-2 hover:bg-pink-900 cursor-pointer ${currentLocale === language.code ? 'font-medium' : ''}`}
-                  onClick={() => handleLanguageChange(language.code)}
-                >
-                  {language.name}
-                </li>
-              ))}
-            </ul>
-          )}
+            {isLangMenuOpen && (
+              <ul className="z-50 absolute top-full right-0 mt-2 bg-nail-special2 shadow-lg rounded-md py-1  min-w-24">
+                {languages.map((language) => (
+                  <li
+                    key={language.code}
+                    className={`px-4 py-2 hover:bg-pink-900 cursor-pointer ${currentLocale === language.code ? 'font-medium' : ''}`}
+                    onClick={() => handleLanguageChange(language.code)}
+                  >
+                    {language.name}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
       </div>
     </div>
@@ -90,3 +92,6 @@ function Menu() {
 }
 
 export default Menu;
+
+
+

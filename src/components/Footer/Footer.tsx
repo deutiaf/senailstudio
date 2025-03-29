@@ -7,8 +7,8 @@ function Footer() {
     const t = useTranslations('Footer');  // Utilisation de useTranslations pour charger les traductions du Footer
 
     return (
-        <footer className="bg-nail-850 relative ">
-            <div className="pl-10 lg:pl-0 flex flex-col-reverse lg:flex-row pt-[340px] md:pt-[720px] lg:pt-0 px-3 md:px-28 lg:px-0 space-y-14 lg:space-y-0">
+        <footer className="bg-nail-850 relative  ">
+            <div className="  w-screen max-w-[1700px] mx-auto pl-10 lg:pl-0 flex flex-col-reverse lg:flex-row pt-[340px] md:pt-[720px] lg:pt-0 px-3 md:px-28 lg:px-0 space-y-14 lg:space-y-0">
                 <div className="lg:w-4/12 lg:pt-14">
                     <div className="w-10/12 md:w-7/12 lg:w-11/12 xl:w-8/12 lg:mx-auto">
                         <BusinessHours headerBgColor="bg-nail-850" regularTextColor="text-neutral-300" />

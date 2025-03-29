@@ -8,7 +8,7 @@ function Booknow() {
 
     return (
         <section className="w-screen relative font-josefin-sans">
-            <div className='z-20 py-16  flex flex-col justify-center  w-4/6 md:w-3/5 lg:w-2/5 lg:top-1/6 space-y-2 md:space-y-5 text-white lg:leading-7 ml-auto mr-5'>
+            <div className=' z-20 py-16  flex flex-col justify-center  w-4/6 md:w-3/5 lg:w-2/5 max-w-3xl lg:top-1/6 space-y-2 md:space-y-5 text-white lg:leading-7 ml-auto mr-5'>
                 <h2 className='text-3xl md:text-5xl lg:text-7xl font-bold  leading-7 md:leading-10 lg:leading-16'>
                     {t('title')}  {/* Remplacer par la clé de traduction */}
                 </h2>

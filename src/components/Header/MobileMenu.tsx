@@ -34,7 +34,7 @@ function MobileMenu() {
     const t = useTranslations('Menu');
 
     return (
-        <div className="lg:hidden w-1/5">
+        <div className="lg:hidden w-1/5 z-40">
             <button
                 onClick={toggleMenu}
                 className="bg-transparent border-0 p-0 flex items-center justify-center"

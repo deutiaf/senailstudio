@@ -26,30 +26,36 @@ export default function Hero() {
     const t = useTranslations('Hero');
 
     return (
-        <div className="shadow-2xl  z-30 bg-gradient-to-t from-transparent via-nail-special2 via-15% to-nail-special2 md:bg-nail-special2 text-white flex flex-col lg:flex-row-reverse  h-[calc(100vh-4rem)]  w-screen  to-95% pt-7 md:pt-0 justify-start md:justify-center items-center xl:px-16">
-            <div className="bg-nail-special2 -z-20 absolute h-2/6 w-full  bottom-0 overflow-hidden md:hidden">
-                <Image src={imgb} alt={`hero`} className="object-cover w-full h-full mix-blend-screen" />
+        <div className="md:shadow-2xl relative z-30 text-white flex flex-col lg:flex-row-reverse h-[calc(100vh-4rem)] w-screen pt-7 md:pt-0 justify-start md:justify-center items-center xl:px-16">
+            {/* Background color layer */}
+            <div className="absolute inset-0 bg-nail-special2 z-10"></div>
 
+            {/* Background image div - positioned below the gradient */}
+            <div className="absolute h-2/6 w-full bottom-0 overflow-hidden md:hidden z-10 bg-gradient-to-b from-transparent to-pink-950">
             </div>
-            <div className=" z-10 md:space-y-4 lg:space-y-0 lg:space-x-10 flex flex-col lg:flex-row h-full lg:max-h-10/12 w-full xl:w-10/12 max-w-[1500px] justify-start md:justify-center items-center ">
-                <div className=" h-1/6 md:h-2/6 lg:h-full lg:w-7/12 lg:mb-0 flex flex-col items-center justify-center  lg:space-y-16 ">
-                    <div className="  md:space-y-8 lg:space-y-6 lg:h-full lg:pl-5 xl:pl-0 flex  flex-col lg:justify-center  ">
-                        <h1 className=" text-nail-50 font-inter font-light scale-y-75  leading-8 md:leading-11 lg:leading-20  lg:tracking-tight  text-5xl md:text-6xl lg:text-8xl text-center lg:text-left px-2 md:px-14 lg:px-0   "><p className=" "><span className="text-lime-300 z-30">{t('title1')}</span > {t('title2')} </p></h1>
-                        <p className=" hidden md:block leading-7  tracking-widest text-sm  text-center lg:text-left lg:w-full w-5/6 mx-auto ">{t("desc")}</p>
+
+            {/* Gradient overlay - positioned above the image */}
+            <div className="absolute inset-0  z-20"></div>
+
+            {/* Main content - above all background elements */}
+            <div className="z-30 md:space-y-4 lg:space-y-0 lg:space-x-10 flex flex-col lg:flex-row h-full lg:max-h-10/12 w-full xl:w-10/12 max-w-[1500px] justify-start md:justify-center items-center">
+                <div className="h-1/6 md:h-2/6 lg:h-full lg:w-7/12 lg:mb-0 flex flex-col items-center justify-center lg:space-y-16">
+                    <div className="md:space-y-8 lg:space-y-6 lg:h-full lg:pl-5 xl:pl-0 flex flex-col lg:justify-center">
+                        <h1 className="text-nail-50 font-inter font-light scale-y-75 leading-8 md:leading-11 lg:leading-20 lg:tracking-tight text-5xl md:text-6xl lg:text-8xl text-center lg:text-left px-2 md:px-14 lg:px-0"><p className=""><span className="text-lime-300 z-30 font-serif">{t('title1')}</span> {t('title2')} </p></h1>
+                        <p className="hidden md:block leading-7 tracking-widest text-sm text-center lg:text-left lg:w-full w-5/6 mx-auto">{t("desc")}</p>
                     </div>
-                    <div className=" flex items-start w-fit mx-auto  ">
+                    <div className="flex items-start w-fit mx-auto">
                         <div className="flex items-center h-fit space-x-3">
-                            <Link href={"https://www.instagram.com/se_nailstudio"} className="hover:bg-nail-50 hover:text-nail-special2 hover:border-nail-special2 transition-colors duration-300 text-sm lg:text-lg text-nail-50 border border-nail-50 py-2 md:py-4 px-7 md:px-12 hidden lg:flex"  > {t("bookNowLink")}</Link>
+                            <Link href={"https://www.instagram.com/se_nailstudio"} className="hover:bg-nail-50 hover:text-nail-special2 hover:border-nail-special2 transition-colors duration-300 text-sm lg:text-lg text-nail-50 border border-nail-50 py-2 md:py-4 px-7 md:px-12 hidden lg:flex">{t("bookNowLink")}</Link>
                         </div>
                     </div>
                 </div>
-                <div className="  relative flex w-full lg:w-5/12 h-3/6 md:h-3/6 lg:h-5/6 overflow-hidden   ">
+                <div className="relative flex w-full lg:w-5/12 h-3/6 md:h-3/6 lg:h-5/6 overflow-hidden">
                     <div className="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out">
                         {images.map((img, index) => (
                             <div
                                 key={index}
-                                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentImageIndex === index ? "opacity-100" : "opacity-0"
-                                    }`}
+                                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentImageIndex === index ? "opacity-100" : "opacity-0"}`}
                             >
                                 <Image src={img} alt={`hero-${index}`} className="object-cover w-full h-full" />
                             </div>
@@ -71,8 +77,8 @@ export default function Hero() {
                     </div>
                 </div>
                 <div className="h-2/6 md:h-fit flex flex-col items-center justify-center">
-                    <p className=" md:hidden leading-5 pt-3 px-2   tracking-widest text-sm font-cinzel  text-center lg:text-left lg:w-full ">{t("desc")}</p>
-                    <Link href={''} className="hover:bg-nail-50 hover:text-nail-special2 hover:border-nail-50 transition-colors duration-300 mt-3 w-fit mx-auto text-sm lg:text-lg text-nail-50 border border-nail-50 py-1  md:py-4 px-7 md:px-12 block lg:hidden "  > {t("bookNowLink")}</Link>
+                    <p className="md:hidden leading-5 pt-3 px-2 tracking-widest text-sm font-cinzel text-center lg:text-left lg:w-full">{t("desc")}</p>
+                    <Link href={''} className="hover:bg-nail-50 hover:text-nail-special2 hover:border-nail-50 transition-colors duration-300 mt-3 w-fit mx-auto text-sm lg:text-lg text-nail-50 border border-nail-50 py-1 md:py-4 px-7 md:px-12 block lg:hidden">{t("bookNowLink")}</Link>
                 </div>
             </div>
         </div>

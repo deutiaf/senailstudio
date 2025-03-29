@@ -101,7 +101,7 @@ function Services() {
 
 
     return (
-        <section ref={sectionRef} className='pt-0 relative bg-white lg:mb-0 overflow-hidden'>
+        <section ref={sectionRef} className='pt-0 relative bg-white lg:mb-0 overflow-hidden w-screen max-w-[1700px] mx-auto'>
             <h1 className='tracking-[0.4rem] md:tracking-[0.7rem] lg:tracking-[0.9rem] font-medium w-fit text-left px-3 lg:px-10 text-2xl lg:text-3xl text-nail-special2 lg:pt-16'>
                 {t('title')}
             </h1>
@@ -124,8 +124,8 @@ function Services() {
                                             <span className='h-full'>{item.service}</span>
                                         </h2>
                                         <ChevronRight className='peer-checked:text-nail-special2 size-6 lg:size-8 peer-checked:rotate-90 transition-transform ease-out absolute inset-y-0 right-0 mr-2 mt-10' strokeWidth={0.5} />
-                                        <div className='peer-checked:h-32 peer-checked:opacity-100 h-0 opacity-0 overflow-hidden transition-all duration-500 w-11/12 origin-bottom'>
-                                            <p className='px-4 border-b-[1px] border-b-zinc-300 pt-2 pb-9 mb-6'>
+                                        <div className='peer-checked:h-44 md:peer-checked:h-32 peer-checked:opacity-100 h-0 opacity-0 overflow-hidden transition-all duration-500 w-11/12 origin-bottom'>
+                                            <p className='px-4 border-b-[1px] border-b-zinc-300 pt-2 pb-9 mb-6 text-[15px]'>
                                                 {item.description}
                                             </p>
                                         </div>

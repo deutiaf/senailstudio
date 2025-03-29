@@ -130,7 +130,7 @@ function Services() {
 
 
     return (
-        <section className='pt-0 relative bg-white mb-52 lg:mb-0 overflow-x-hidden'>
+        <section className='w-screen max-w-[1700px] mx-auto pt-0 relative mb-52 lg:mb-0 overflow-x-hidden'>
             <h1 className='tracking-[0.9rem] font-medium w-fit text-left px-3 lg:px-10 text-2xl lg:text-3xl text-nail-special2 pt-16 word-spacing-big'>
                 {t('title')}
             </h1>
@@ -142,7 +142,7 @@ function Services() {
             <div className='flex px-5 flex-col lg:flex-row mb-40 md:mb-60 lg:mb-10'>
                 <div className='lg:w-3/6 relative'>
                     <div className='h-fit font-cormorant-garamond word-spacing text-lg xl:text-xl font-medium leading-7 text-pretty text-zinc-600'>
-                        <div className='w-full lg:w-10/12 font-poppins text-sm font-normal tracking-widest leading-6 mx-auto flex flex-col justify-center items-center'>
+                        <div className='w-full lg:w-10/12 font-poppins text-sm font-normal tracking-wide leading-7 mx-auto flex flex-col justify-center items-center'>
                             {manicureServices.map((item, index) => (
                                 <div id={`item-${item.id}`} key={item.id} className='flex flex-col w-full shrink-0'>
                                     <label htmlFor={item.id} className='w-full overflow-hidden relative'>
@@ -152,8 +152,8 @@ function Services() {
                                             <span className='h-full'>{item.service}</span>
                                         </h2>
                                         <ChevronRight className='peer-checked:text-nail-special2 size-6 lg:size-8 peer-checked:rotate-90 transition-transform ease-out absolute inset-y-0 right-0 mr-2 mt-10' strokeWidth={0.5} />
-                                        <div className='peer-checked:h-44 peer-checked:opacity-100 h-0 opacity-0 overflow-hidden transition-all duration-500 w-11/12 origin-bottom'>
-                                            <p className='px-4 border-b-[1px] border-b-zinc-300 pt-2 pb-9 mb-6'>
+                                        <div className='peer-checked:h-48 peer-checked:opacity-100 h-0 opacity-0 overflow-hidden transition-all duration-500 w-11/12 origin-bottom'>
+                                            <p className='px-4 border-b-[1px] border-b-zinc-300 pt-2 pb-9 mb-6 text-[15px]'>
                                                 {item.description}
                                             </p>
                                         </div>
@@ -199,7 +199,7 @@ function Services() {
             <div className='flex px-5 flex-col lg:flex-row-reverse mb-40 md:mb-72 '>
                 <div className='lg:w-3/6 relative'>
                     <div className='h-fit font-cormorant-garamond word-spacing text-lg xl:text-xl font-medium leading-7 text-pretty text-zinc-600'>
-                        <div className='w-full lg:w-10/12 font-poppins text-sm font-normal tracking-widest leading-6 mx-auto flex flex-col justify-center items-center'>
+                        <div className='w-full lg:w-10/12 font-poppins text-sm font-normal tracking-wide leading-7 mx-auto flex flex-col justify-center items-center'>
                             {pedicureServices.map((item, index) => (
                                 <div id={`item-${item.id}`} key={item.id} className='flex flex-col w-full shrink-0'>
                                     <label htmlFor={item.id} className='w-full overflow-hidden relative'>
@@ -209,8 +209,8 @@ function Services() {
                                             <span className='h-full'>{item.service}</span>
                                         </h2>
                                         <ChevronRight className='peer-checked:text-nail-special2 size-6 lg:size-8 peer-checked:rotate-90 transition-transform ease-out absolute inset-y-0 right-0 mr-2 mt-10' strokeWidth={0.5} />
-                                        <div className='peer-checked:h-44 peer-checked:opacity-100 h-0 opacity-0 overflow-hidden transition-all duration-500 w-11/12 origin-bottom'>
-                                            <p className='px-4 border-b-[1px] border-b-zinc-300 pt-2 pb-9 mb-6'>
+                                        <div className='peer-checked:h-48 peer-checked:opacity-100 h-0 opacity-0 overflow-hidden transition-all duration-500 w-11/12 origin-bottom'>
+                                            <p className='px-4 border-b-[1px] border-b-zinc-300 pt-2 pb-9 mb-6 text-[15px]'>
                                                 {item.description}
                                             </p>
                                         </div>
@@ -256,7 +256,7 @@ function Services() {
             <div className='flex px-5 flex-col lg:flex-row mb-44 md:mb-96'>
                 <div className='lg:w-3/6 relative lg:mb-0 mb-20'>
                     <div className='h-fit font-cormorant-garamond word-spacing text-lg xl:text-xl font-medium leading-7 text-pretty text-zinc-600'>
-                        <div className='w-full lg:w-10/12 font-poppins text-sm font-normal tracking-widest leading-6 mx-auto flex flex-col justify-center items-center'>
+                        <div className='w-full lg:w-10/12 font-poppins text-sm font-normal tracking-wide leading-7 mx-auto flex flex-col justify-center items-center'>
                             {repairAndOtherServices.map((item, index) => (
                                 <div id={`item-${item.id}`} key={item.id} className='flex flex-col w-full shrink-0'>
                                     <label htmlFor={item.id} className='w-full overflow-hidden relative'>
@@ -266,8 +266,8 @@ function Services() {
                                             <span className='h-full'>{item.service}</span>
                                         </h2>
                                         <ChevronRight className='peer-checked:text-nail-special2 size-6 lg:size-8 peer-checked:rotate-90 transition-transform ease-out absolute inset-y-0 right-0 mr-2 mt-10' strokeWidth={0.5} />
-                                        <div className='peer-checked:h-44 peer-checked:opacity-100 h-0 opacity-0 overflow-hidden transition-all duration-500 w-11/12 origin-bottom'>
-                                            <p className='px-4 border-b-[1px] border-b-zinc-300 pt-2 pb-9 mb-6'>
+                                        <div className='peer-checked:h-48 peer-checked:opacity-100 h-0 opacity-0 overflow-hidden transition-all duration-500 w-11/12 origin-bottom'>
+                                            <p className='px-4 border-b-[1px] border-b-zinc-300 pt-2 pb-9 mb-6 text-[15px] '>
                                                 {item.description}
                                             </p>
                                         </div>

@@ -69,7 +69,7 @@ function Page() {
     }, []);
 
     return (
-        <section className='w-screen mb-32'>
+        <section className=' mb-32 w-screen max-w-[1700px] mx-auto'>
             {/* Hero Section */}
             <div
                 ref={heroRef}

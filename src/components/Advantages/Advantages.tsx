@@ -46,7 +46,7 @@ function Advantages() {
                     objectFit='cover'
                     className='opacity-80'
                 />
-                <div className='absolute inset-0 backdrop-blur-sm bg-black/20'></div>
+                <div className='absolute inset-0 backdrop-blur-none bg-black/20'></div>
             </div>
 
             <h1 className='md:tracking-[0.6rem] lg:tracking-[0.9rem] font-medium text-right px-3 lg:px-10 text-2xl lg:text-3xl text-white py-4 word-spacing-big relative z-10'>
@@ -54,13 +54,13 @@ function Advantages() {
             </h1>
 
             <div className='flex w-full'>
-                <div className='mx-auto w-11/12 lg:w-full pr-2 gap-2 lg:flex grid md:grid-cols-2 text-nail-50 relative z-10'>
+                <div className=' max-w-[1700px] mx-auto w-11/12 lg:w-full pr-2 gap-2 lg:flex grid md:grid-cols-2 text-nail-50 relative z-10'>
                     {advantagesData.map((item, index) => {
                         const IconComponent = item.icon;
                         return (
                             <div
                                 key={index}
-                                className="rounded-2xl shadow-2xl w-full flex mb-4 bg-black/20"
+                                className="rounded-2xl shadow-2xl shadow-black/40 w-full flex mb-4 bg-black/20"
                             >
                                 <div className='z-20 flex flex-col items-center justify-center space-y-3 p-4 w-full'>
                                     {/* Icon Container */}

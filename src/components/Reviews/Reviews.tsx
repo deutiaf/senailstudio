@@ -214,8 +214,8 @@ function ImageCarousel({ maxTextLength = 150 }: ImageCarouselProps) {
     };
 
     return (
-        <section className="mb-24 md:mb-20 mt-20 overflow-hidden py-10 text-sm md:text-lg text-zinc-600 px-4 lg:px-20 xl:px-32 leading-6 md:leading-tight relative">
-            <div className='items-center w-full flex flex-col md:flex-row'>
+        <section className="mb-10 md:mb-20 mt-20 overflow-hidden py-10 text-sm md:text-lg text-zinc-600 px-4 lg:px-20 xl:px-32 leading-6 md:leading-tight relative">
+            <div className=' mx-auto max-w-[1700px] items-center w-full flex flex-col md:flex-row'>
                 <div
                     ref={leftSideRef}
                     className={`md:w-1/2 md:border-r-[0.5px] md:pr-10 space-y-5 word-spacing font-poppins transition-all delay-300 duration-1000 ease-out transform ${isLeftVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}
@@ -235,19 +235,19 @@ function ImageCarousel({ maxTextLength = 150 }: ImageCarouselProps) {
                     {/* Carousel container */}
                     <div
                         ref={carouselRef}
-                        className="font-josefin-sans flex overflow-x-auto snap-x snap-mandatory w-full scrollbar-hide items-center"
+                        className=" font-josefin-sans flex overflow-x-auto snap-x snap-mandatory w-full scrollbar-hide items-center"
                         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                     >
                         {/* Slides */}
                         {slidesData.map((slide, index) => (
                             <div
                                 key={index}
-                                className="z-40 flex-shrink-0 w-full h-fit snap-center px-2"
+                                className="  z-40 flex-shrink-0 w-full h-fit snap-center px-2"
                             >
-                                <div className="z-40 relative w-full overflow-hidden space-y-3 flex flex-col items-center justify-center">
+                                <div className=" shadow-black/10 shadow-lg md:shadow-none z-40 relative w-full overflow-hidden space-y-3 flex flex-col items-center justify-center">
                                     <div className='w-auto flex flex-col space-x-4 justify-center'>
                                         <div className='flex flex-col space-x-4 w-fit justify-center items-center mx-auto'>
-                                            <div className='mb-3 mx-auto aspect-1-1 overflow-hidden relative h-full size-16'>
+                                            <div className=' mb-3 mx-auto aspect-1-1 overflow-hidden relative h-full size-16'>
                                                 {slide.imageUrl ? (
                                                     <Image
                                                         src={slide.imageUrl}
@@ -337,37 +337,53 @@ function ImageCarousel({ maxTextLength = 150 }: ImageCarouselProps) {
             {/*    -------------------------------    DESIGN MOBILE ONLY  ---------------------     */}
 
 
-            <div className="-z-10 md:hidden  h-96 overflow-hidden grid grid-cols-5 grid-rows-5 gap-1  -rotate-12 w-11/12 -left-[17rem] -bottom-24 scale-75  absolute   text-nail-special2 ">
-                {/* Première rangée */}
-                <div className="col-span-2 row-start-1 font-cherry-bomb-one text-4xl overflow-hidden">Polished Perfection</div>
-                <div className="col-start-3 row-start-1 font-fontdiner-swanky text-2xl"> Nail Art Studio</div>
-                <div className="col-span-2 col-start-4 row-start-1 font-fontdiner-swanky text-4xl overflow-hidden">Sparkle & Shine</div>
 
-                {/* Deuxième rangée */}
-                <div className="row-span-4 col-start-1 row-start-2 font-cherry-bomb-one flex items-center justify-center flex-col space-y-10">
-                    <div className=' -rotate-90  '>Luxury Hand & Foot Care </div>
-                    <div className=' -rotate-90  '>Luxury Hand & Foot Care </div>
-                    <div className=' -rotate-90  '>Luxury Hand & Foot Care </div>
-                    <div className=' -rotate-90  '>Luxury Hand & Foot Care </div>
-                </div>
-                <div className="col-span-2 col-start-2 row-start-2 font-bangers text-5xl overflow-hidden">Nailed By Irene</div>
-                <div className="col-span-2 col-start-4 row-start-2 font-bangers text-5xl">Chic & Glossy</div>
-
-                {/* Troisième rangée */}
-                <div className="col-span-2 col-start-2 row-start-3 font-fontdiner-swanky text-5xl text-center flex items-center -rotate-12 overflow-hidden">Vivid Nails</div>
-                <div className="col-span-2 col-start-4 row-start-3 row-end-5 overflow-hidden flex justify-center items-center text-4xl font-bangers tracking-wider font-bold"><div className='text-center m-auto  -rotate-90 h-fit w-full '>Hydrating Hand Treatments</div></div>
-
-                {/* Quatrième rangée */}
-                <div className="col-start-2 row-start-4 font-cherry-bomb-one text-2xl">Creative Nails</div>
-                <div className="col-start-3 row-start-4 font-fontdiner-swanky rotate-6">Unique Designs. Unique Designs</div>
-
-                {/* Cinquième rangée */}
-                <div className="col-span-2 col-start-2 row-start-5 font-bangers text-2xl word-spacing tracking-wider">Flawless Finish Flawless Finish Flawless Finish</div>
-                <div className="col-span-2 col-start-4 row-start-5 font-cherry-bomb-one text-4xl rotate-12">Sculpted Acrylics</div>
-            </div>
-            <div className=' -z-10 md:hidden  h-96 overflow-hidden grid grid-cols-5 grid-rows-5 gap-1   -rotate-12 w-11/12 -left-[17rem] -bottom-24 scale-75  absolute  bg-gradient-to-tl from-white via-white via-20% to-transparent'></div>
         </section>
     )
 }
 
 export default ImageCarousel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// <div className="-z-10 md:hidden  h-96 overflow-hidden grid grid-cols-5 grid-rows-5 gap-1  -rotate-12 w-11/12 -left-[17rem] -bottom-24 scale-75  absolute   text-nail-special2 ">
+// {/* Première rangée */}
+// <div className="col-span-2 row-start-1 font-cherry-bomb-one text-4xl overflow-hidden">Polished Perfection</div>
+// <div className="col-start-3 row-start-1 font-fontdiner-swanky text-2xl"> Nail Art Studio</div>
+// <div className="col-span-2 col-start-4 row-start-1 font-fontdiner-swanky text-4xl overflow-hidden">Sparkle & Shine</div>
+
+// {/* Deuxième rangée */}
+// <div className="row-span-4 col-start-1 row-start-2 font-cherry-bomb-one flex items-center justify-center flex-col space-y-10">
+//     <div className=' -rotate-90  '>Luxury Hand & Foot Care </div>
+//     <div className=' -rotate-90  '>Luxury Hand & Foot Care </div>
+//     <div className=' -rotate-90  '>Luxury Hand & Foot Care </div>
+//     <div className=' -rotate-90  '>Luxury Hand & Foot Care </div>
+// </div>
+// <div className="col-span-2 col-start-2 row-start-2 font-bangers text-5xl overflow-hidden">Nailed By Irene</div>
+// <div className="col-span-2 col-start-4 row-start-2 font-bangers text-5xl">Chic & Glossy</div>
+
+// {/* Troisième rangée */}
+// <div className="col-span-2 col-start-2 row-start-3 font-fontdiner-swanky text-5xl text-center flex items-center -rotate-12 overflow-hidden">Vivid Nails</div>
+// <div className="col-span-2 col-start-4 row-start-3 row-end-5 overflow-hidden flex justify-center items-center text-4xl font-bangers tracking-wider font-bold"><div className='text-center m-auto  -rotate-90 h-fit w-full '>Hydrating Hand Treatments</div></div>
+
+// {/* Quatrième rangée */}
+// <div className="col-start-2 row-start-4 font-cherry-bomb-one text-2xl">Creative Nails</div>
+// <div className="col-start-3 row-start-4 font-fontdiner-swanky rotate-6">Unique Designs. Unique Designs</div>
+
+// {/* Cinquième rangée */}
+// <div className="col-span-2 col-start-2 row-start-5 font-bangers text-2xl word-spacing tracking-wider">Flawless Finish Flawless Finish Flawless Finish</div>
+// <div className="col-span-2 col-start-4 row-start-5 font-cherry-bomb-one text-4xl rotate-12">Sculpted Acrylics</div>
+// </div>
+// <div className=' -z-10 md:hidden  h-96 overflow-hidden grid grid-cols-5 grid-rows-5 gap-1   -rotate-12 w-11/12 -left-[17rem] -bottom-24 scale-75  absolute  bg-gradient-to-tl from-white via-white via-20% to-transparent'></div>

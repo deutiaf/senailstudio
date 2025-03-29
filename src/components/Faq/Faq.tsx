@@ -64,7 +64,7 @@ function Faq() {
   const t = useTranslations('Faq'); // Charger les traductions spécifiques à la FAQ
 
   return (
-    <section id="faq" className='mb-16 w-screen py-10 md:py-20 h-fit font-poppins font-normal word-spacing tracking-wide text-sm leading-7 text-pretty text-zinc-600'>
+    <section id="faq" className=' w-screen max-w-[1700px] mx-auto mb-16 py-10 md:py-20 h-fit font-poppins font-normal word-spacing tracking-wide text-sm leading-7 text-pretty text-zinc-600'>
       <h1 className='font-bold font-cinzel text-center text-2xl md:text-3xl lg:text-7xl text-zinc-700 my-4 lg:my-12'>
         {t('title')}
       </h1>
@@ -78,7 +78,7 @@ function Faq() {
               </h2>
               <ChevronRight className='size-4 lg:size-6 peer-checked:rotate-90 transition-transform ease-out absolute inset-y-0 right-0 mr-2 mt-4' />
               <div className='peer-checked:h-48 md:peer-checked:h-32 peer-checked:opacity-100 h-0 opacity-0 overflow-hidden transition-all duration-500 w-11/12 origin-bottom'>
-                <p className='px-4 border-b-[1px] border-b-zinc-300 pt-2 pb-9 mb-6'>
+                <p className='px-4 border-b-[1px] border-b-zinc-300 pt-2 pb-9 mb-6 text-[15px]'>
                   {t(item.answerKey)}
                 </p>
               </div>
