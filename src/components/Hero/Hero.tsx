@@ -6,7 +6,6 @@ import img1 from '@/../public/images/nail-ondfvo.jpg'
 import img2 from '@/../public/images/nail-ncoiz.jpg'
 import img3 from '@/../public/images/nail-eed.jpg'
 import img4 from '@/../public/images/nail-nicdc.jpg'
-import imgb from '@/../public/images/annie-spratt-MUVKrHNMvoQ-unsplash.jpg'
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
